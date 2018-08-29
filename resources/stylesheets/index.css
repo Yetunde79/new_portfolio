@@ -1,0 +1,140 @@
+body, html{
+    margin: 0;
+    padding: 0;
+    font-family: 'Questrial', sans-serif;
+    background-color: blue;
+}
+
+.summary{
+    background-image: url("../img/Home_Header.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #AD75C9;
+    width: 100%;
+    height: 90vh;
+    color: white;
+}
+
+#navbar{
+    float: left;
+}
+
+a, a:hover, a:focus {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+#sidebar {
+    min-width: 250px;
+    max-width: 250px;
+    min-height: 100vh;
+    color: #fff;
+    transition: all 0.3s;
+}
+
+#sidebar ul li a {
+    padding: 10px;
+    font-size: 1.1em;
+    display: block;
+}
+
+#sidebar ul li a:hover {
+   text-decoration: underline;
+}
+
+ul ul a {
+    font-size: 0.9em !important;
+    padding-left: 30px !important;
+}
+
+#sidebar.active {
+    margin-left: -250px;
+}
+
+#sidebarCollapse{
+    display: none;
+}
+
+#full_logo{
+    float: right;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#center{
+    text-align: center;
+    padding-top: 20%;
+    width: 85%;
+}
+
+.content{
+    background-image: url("../img/home_background.png");   
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+    width: auto\9;
+}
+
+/*mobile responsive*/
+
+@media (max-width: 768px) {
+    #sidebarCollapse{
+        display: block;
+    }
+    #sidebar {
+        margin-left: -250px;
+    }
+    #sidebar.active {
+        margin-left: 0;
+    }
+}
+
+/*tablet*/
+@media (min-width: 450px) and (max-width: 750px)  {/*450-555px problem when menu on*/
+    #center{  
+       padding-top: 30%; 
+       width: 90%;
+    }
+
+    h3{
+        font-size: 1.4em;
+    }
+
+}
+
+/*iphone and other mobile phones*/
+@media (min-width: 300px) and (max-width: 449px)  {
+    #center{  
+        padding-top: 40%; 
+        width: 100%;
+     }
+     h3{
+         font-size: 1.2em;
+     }
+
+    #navbar{
+        float: none;
+    }
+
+    #full_logo{
+        padding-top: 15%;
+        
+    }
+
+    #sidebar {
+        position: fixed;
+        color: #fff;
+        transition: all 0.3s;
+    }
+
+    #sidebar ul li a {
+        font-size: 0.75em;
+    }
+
+    ul { text-align: center; }
+    ul li { display: inline-block; }
+}
