@@ -1,0 +1,21 @@
+
+.contact{
+    height: auto;
+    border-radius: 10px;
+    background-color: #F4E9F8;
+    width: 50%;
+    margin-top: 10%;
+}
+
+.contact form{
+    padding-left: 5%;
+    padding-right: 5%;
+}
+.contact input textarea{
+    width: 80%;
+
+}
+
+#contact_heading{
+    text-align: center;
+}

@@ -10,7 +10,10 @@
     <!--bootstrap css-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="resources/stylesheets/menu.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="resources/stylesheets/index.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="resources/stylesheets/contact.css" />
+
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
         crossorigin="anonymous">
 
@@ -21,7 +24,7 @@
 
 <body>
 
-    <div>
+    <div id="body_container">
         <main class="summary">
 
             <div class="container-fluid">
@@ -34,19 +37,19 @@
                             <ul class="list-unstyled components">
 
                                 <li class="active">
-                                    <a href="#homeSubmenu">Home</a>
+                                    <a href="#">Home</a>
                                 </li>
 
                                 <li>
-                                    <a href="#">Projects</a>
+                                    <a href="projects.html">Projects</a>
                                 </li>
 
                                 <li>
-                                    <a href="#">About</a>
+                                    <a href="about.html">About</a>
                                 </li>
 
                                 <li>
-                                    <a href="#">Contact</a>
+                                    <a href="contact.html">Contact</a>
                                 </li>
                             </ul>
 
@@ -65,10 +68,10 @@
                     <h3>I have experience in both front-end and back-end</h3>
 
                     <div>
-                        <button class="btn btn-secondary btn-lg">
+                        <button class="btn btn-secondary btn-lg btn-space">
                             Blog
                         </button>
-                        <button class="btn btn-light btn-lg">
+                        <button class="btn btn-light btn-lg mobile_btn">
                             Get in touch
                         </button>
                     </div>
@@ -78,8 +81,96 @@
             </div>
         </main>
 
+        <section class="content">
+
+            <div id="recent">
+                <h2>
+                    <u>Recent Work</u>
+                </h2>
+
+                <section class="work">
+                    <img src="resources/img/shoot.JPG" alt="shoot" />
+                    <p>Build-out of company website by transforming the design into code using front-end technology such as
+                        HTML, CSS, JavaScript. Prepared productivity audits for my department and ensured seamless integration
+                        with Application Programming Interfaces (APIs).</p>
+                </section>
+            </div>
+
+            <section class="skills">
+                <h2>
+                    <u>Skills</u>
+                </h2>
+                <ul>
+                    <li>Project Management</li>
+                    <li>Proffesional Communication</li>
+                    <li>Self-Starter</li>
+                </ul>
+
+                <section class="skill_grid">
+                    <div class="purple">HTML</div>
+                    <div class="purple">CSS</div>
+                    <div class="purple">Bootstrap</div>
+                    <div class="purple">JavaScript</div>
+                    <div class="purple">Node.js</div>
+                    <div class="purple">PHP</div>
+                </section>
+            </section>
+
+            <section class="contact container-fluid">
+                <h2 id="contact_heading">
+                    <u>Contact Me</u>
+                </h2>
+
+                <form>
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Name" name="name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Email</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Subject</label>
+                        <input type="text" class="form-control" id="subject" placeholder="Subject" name="subject">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Message</label>
+                        <textarea class="form-control" name="message" placeholder="Type your message here"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </section>
+
+            <footer>
+                <ul>
+                    <li>Github</li>
+                    <li>LinkedIn</li>
+                    <li>Twitter</li>
+                    <li>Codepen</li>
+
+                    <li>
+                        <img src="resources/img/y.png" alt="logo">
+                    </li>
+                    <li>HOME</li>
+                    <li>PROJECTS</li>
+                    <li>ABOUT</li>
+                    <li>CONTACT</li>
+
+                </ul>
+            </footer>
+
+
+        </section>
+
 
     </div>
+
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
