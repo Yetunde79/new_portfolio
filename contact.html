@@ -1,3 +1,43 @@
+<!-- <?php
+
+		$name = $_POST['name'];
+		$email = $_POST['email'];
+		$message = $_POST['message'];
+		$from = 'From: yetunde@yetundesolaadebayo.com';
+		$to = 'ysolaadebayo@gmail.com'; 
+		$subject = $_POST['subject'];
+		
+		 $body = "From: $name\n E-Mail: $email\n Message:\n $message";
+
+          if ($_POST["submit"]) {
+             if (!$_POST["email"]) {
+            
+              echo "<script>alert('The email field is required');</script>";
+            
+			}
+            
+            if (!$_POST["name"]) {
+            
+              echo "<script>alert('The name field is required');</script>";
+            
+			}
+        
+        if (!$_POST["message"]) {
+            
+            echo "The content field is required.";
+            
+        }
+        else{
+			if (mail ($to, $subject, $body, $from)) { 
+				 echo "<script>alert('Email sent successfully');</script>";
+			} else { 
+				echo "<script>alert('The email could not be sent');</script>";
+			}
+		}
+	}
+      
+?> -->
+
 <!DOCTYPE html>
 <html>
 
@@ -10,8 +50,9 @@
     <!--bootstrap css-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" media="screen" href="resources/stylesheets/menu.css" />
-    <!-- <link rel="stylesheet" type="text/css" media="screen" href="resources/stylesheets/index.css" /> -->
+    <link rel="stylesheet" type="text/css" media="screen" href="resources/stylesheets/header_footer.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="resources/stylesheets/contact.css" />
+
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
         crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
@@ -19,9 +60,8 @@
 
 <body>
 
-    <div id="body_container">
+    <div class="contact_body">
         <main class="summary">
-
             <div class="container-fluid">
 
                 <header>
@@ -44,16 +84,104 @@
                                 </li>
 
                                 <li>
+                                    <a href="resume.pdf" target="_blank">Resume</a>
+                                </li>
+
+                                <li>
                                     <a href="contact.html">Contact</a>
                                 </li>
                             </ul>
-
                         </nav>
                     </section>
                 </header>
+
+                <section class="contact_form ">
+                    <div class="contact_text">
+                        <h4>I am always looking for new and exciting opportunities to work with companies and individuals on
+                            projects big or small</h4>
+                        <sm>Fill the form and I'll get back to you as soon as possible</sm>
+                    </div>
+
+                    <section class="contact">
+                        <h2 id="contact_heading">
+                            <u>Contact Me</u>
+                        </h2>
+
+                        <form>
+                            <div class="form-group">
+                                <label>Name</label>
+                                <input type="text" class="form-control" id="name" placeholder="Name" name="name">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Email</label>
+                                <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+                            </div>
+
+                            <div class="form-group">
+                                <label>Subject</label>
+                                <input type="text" class="form-control" id="subject" placeholder="Subject" name="subject">
+                            </div>
+
+                            <div class="form-group">
+                                <label>Message</label>
+                                <textarea class="form-control" name="message" placeholder="Type your message here"></textarea>
+                            </div>
+
+                            <div class="text-center">
+                                <input type="submit" class="btn btn-light submit" name="submit" value="Submit">
+                            </div>
+
+                        </form>
+                    </section>
+                </section>
             </div>
         </main>
+
+        <footer>
+            <ul>
+                <li>
+                    <a href="https://github.com/Yetunde79">Github</a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/yetundeadebayo/">LinkedIn</a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/yetunde_sola?lang=en">Twitter</a>
+                </li>
+                <li>
+                    <a href="https://codepen.io/yetty79/">Codepen</a>
+                </li>
+
+                <li>
+                    <a href="index.html">
+                        <img src="resources/img/y.png" alt="logo">
+                    </a>
+                </li>
+
+                <li>
+                    <a href="index.html">HOME</a>
+                </li>
+                <li>
+                    <a href="projects.html">PROJECTS</a>
+                </li>
+                <li>
+                    <a href="about.html">ABOUT</a>
+                </li>
+                <li>
+                    <a href="contact.html">CONTACT</a>
+                </li>
+
+            </ul>
+
+            <p class="name"> &copy; Yetunde Sola-Adebayo</p>
+        </footer>
+
     </div>
+
+
+
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

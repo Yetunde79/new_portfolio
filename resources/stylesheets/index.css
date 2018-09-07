@@ -4,27 +4,21 @@ body, html{
     font-family: 'Questrial', sans-serif;
     height: 100%;
     width: 100%;
-    /* background-color: blue; */
 }
-
-#body_container {
-    min-height:100%;
-    position:relative;
- }
 
  #sidebar {
     color: white;
 }
 
 .summary{
-    background-image: url("../img/Home_Header.png");
+    background-image: url("https://s3.us-east-2.amazonaws.com/homebackground/home_header.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: #AD75C9;
+    background-color: #2E0854;
     width: 100%;
     height: auto;
     color: white;
-    padding-bottom: 10%;
+    padding-bottom: 8%;
 }
 
 #full_logo{
@@ -48,8 +42,10 @@ body, html{
     padding-left: 9%;
     padding-right: 7%;
     text-align: justify;
+}
+
+.font{
     font-size: 1.3em;
-    height: 2000px;
 }
 
 #recent{
@@ -73,6 +69,20 @@ body, html{
     grid-gap: 25px;
     padding-left: 10%;
     padding-right: 10%;
+    padding-bottom: 20%;
+}
+
+.lang{
+    position: absolute;
+    top: 40%;
+    left: 20%;
+    height: 50%;
+    width: 50%;
+}
+
+.contact_pad{
+    padding-top: 5%;
+    padding-bottom: 3%;
 }
 
 .purple{
@@ -82,7 +92,9 @@ body, html{
     height: 140px;
     width: 140px;
     text-align: center;
+    position: relative;
 }
+
 img{
     max-width: 100%;
     height: auto;
@@ -93,32 +105,9 @@ img{
    margin-right: 15px;
 }
 
-.contact{
-    padding-bottom: 100px;
-}
-
-footer{       /*mobile design footer*/
-  position:absolute;
-   bottom:0;
-   left: 0;
-   width:100%;
-   height:auto;
-   font-size: 0.9em;
-}
-
-footer ul {
- text-align: left; 
-}
-
-footer ul li { 
-    display: inline-block;
-    padding: 30px;
- }
 
 
 /*mobile responsive*/
-
-
 
 /*iphone and other mobile phones*/
 @media (min-width: 300px) and (max-width: 449px)  {
@@ -138,19 +127,6 @@ footer ul li {
         padding-top: 15%; 
     }
 
-    #sidebar {
-        position: fixed;
-        color: #fff;
-        transition: all 0.3s;
-    }
-
-    #sidebar ul li a {
-        font-size: 0.75em;
-    }
-
-    #sidebar ul { text-align: center; }
-    #sidebar ul li { display: inline-block; }
-
     .work{
         display: grid;
         grid-template-columns: 1fr ;
@@ -168,9 +144,6 @@ footer ul li {
 
 /*tablet*/
 @media (min-width: 450px) and (max-width: 555px)  {
-    #sidebar {
-        margin-left: -180px;
-    }
 
     #center{  
         padding-top: 20%; 
@@ -229,15 +202,3 @@ footer ul li {
      }
 }
 
-@media (max-width: 768px) {
-    #sidebarCollapse{
-        display: block;
-    }
-    #sidebar {
-        margin-left: -250px;
-    }
-    #sidebar.active {
-        margin-left: 0;
-    }
-
-}

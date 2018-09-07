@@ -10,8 +10,8 @@
     <!--bootstrap css-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" media="screen" href="resources/stylesheets/menu.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="resources/stylesheets/footer.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="resources/stylesheets/header_footer.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="resources/stylesheets/projects.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
         crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
@@ -44,6 +44,10 @@
                                 </li>
 
                                 <li>
+                                    <a href="resume.pdf" target="_blank">Resume</a>
+                                </li>
+
+                                <li>
                                     <a href="contact.html">Contact</a>
                                 </li>
                             </ul>
@@ -52,34 +56,93 @@
                     </section>
                 </header>
 
-                <section id="project">
+                <section class="container">
+                    <section id="project">
 
+                        <figure class="wp-caption">
+                            <a href="https://www.yettifood.com/">
+                                <img src="resources/img/yettifood.png" alt="blog" class="proj_img">
+                                <figcaption class="wp-caption-text">This food blog was created with Node.js, Express.js, ejs, MongoDB/Mongoose and passport.js
+                                    so I can login to create posts.</figcaption>
+                            </a>
+                        </figure>
 
+                        <figure class="wp-caption">
+                            <a href="https://www.shootbeta.com/">
+                                <img src="resources/img/shootbeta.jpg" alt="shoot" class="proj_img">
+                                <figcaption class="wp-caption-text">Made with the team at Shoot Technologies. It was created with HTML, CSS and JavaScript.</figcaption>
+                            </a>
+                        </figure>
 
+                        <figure class="wp-caption">
+                            <a href="https://yetundesolaadebayo.com/project/movieapp">
+                                <img src="resources/img/movie.jpg" alt="movie_app" class="proj_img">
+                                <figcaption class="wp-caption-text">A movie search app created with NodeJS, ExpressJS, CSS and the OMDb API. You can find the
+                                    year released and summary of the movie.</figcaption>
+                            </a>
+                        </figure>
+
+                        <figure class="wp-caption">
+                            <a href="https://yetundesolaadebayo.com/project/twitter_api/">
+                                <img src="resources/img/twitter.jpg" alt="twitter_client" class="proj_img">
+                                <figcaption class="wp-caption-text">A twitter client that retrieves the most popular tweets from any username. It was created
+                                    with Twitter API, HTML, CSS and PHP.</figcaption>
+                            </a>
+                        </figure>
+
+                        <figure class="wp-caption">
+                            <a href="https://yetundesolaadebayo.com/project/weatherchecker/">
+                                <img src="resources/img/weather.jpg" alt="weather" class="proj_img">
+                                <figcaption class="wp-caption-text">A website that finds the weather in any city. It was created with OpenWeatherMap API, HTML,
+                                    CSS and PHP</figcaption>
+                            </a>
+                        </figure>
+
+                    </section>
                 </section>
             </div>
         </main>
-
-        <footer>
-            <ul>
-                <li>Github</li>
-                <li>LinkedIn</li>
-                <li>Twitter</li>
-                <li>Codepen</li>
-
-                <li>
-                    <img src="resources/img/y.png" alt="logo">
-                </li>
-                <li>HOME</li>
-                <li>PROJECTS</li>
-                <li>ABOUT</li>
-                <li>CONTACT</li>
-
-            </ul>
-        </footer>
-
-
     </div>
+
+    <footer>
+        <ul>
+            <li>
+                <a href="https://github.com/Yetunde79">Github</a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/in/yetundeadebayo/">LinkedIn</a>
+            </li>
+            <li>
+                <a href="https://twitter.com/yetunde_sola?lang=en">Twitter</a>
+            </li>
+            <li>
+                <a href="https://codepen.io/yetty79/">Codepen</a>
+            </li>
+
+            <li>
+                <a href="index.html">
+                    <img src="resources/img/y.png" alt="logo">
+                </a>
+            </li>
+
+            <li>
+                <a href="index.html">HOME</a>
+            </li>
+            <li>
+                <a href="projects.html">PROJECTS</a>
+            </li>
+            <li>
+                <a href="about.html">ABOUT</a>
+            </li>
+            <li>
+                <a href="contact.html">CONTACT</a>
+            </li>
+
+        </ul>
+
+        <p class="name"> &copy; Yetunde Sola-Adebayo</p>
+    </footer>
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
