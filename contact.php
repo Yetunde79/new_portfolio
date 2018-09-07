@@ -1,4 +1,4 @@
-<!-- <?php
+ <?php
 
 		$name = $_POST['name'];
 		$email = $_POST['email'];
@@ -36,7 +36,7 @@
 		}
 	}
       
-?> -->
+?> 
 
 <!DOCTYPE html>
 <html>
@@ -51,21 +51,16 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" media="screen" href="resources/stylesheets/header_footer.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="resources/stylesheets/index.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="resources/stylesheets/contact.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="resources/stylesheets/contactme.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
         crossorigin="anonymous">
-
-
     <link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
-    <!-- <script src="main.js"></script> -->
 </head>
 
 <body>
 
-    <div id="body_container">
+    <div class="contact_body">
         <main class="summary">
-
             <div class="container-fluid">
 
                 <header>
@@ -76,7 +71,7 @@
                             <ul class="list-unstyled components">
 
                                 <li class="active">
-                                    <a href="#">Home</a>
+                                    <a href="index.php">Home</a>
                                 </li>
 
                                 <li>
@@ -92,97 +87,21 @@
                                 </li>
 
                                 <li>
-                                    <a href="contact.html">Contact</a>
+                                    <a href="contact.php">Contact</a>
                                 </li>
                             </ul>
-
                         </nav>
                     </section>
-
-                    <a href="index.html">
-                        <img id="full_logo" src="resources/img/logo.png" alt="logo">
-                    </a>
                 </header>
 
-
-                <section id="center">
-
-                    <h1>Hello!</h1>
-                    <h3>My name is Yetunde and I am currently a freelance web developer living in Houston, TX. I recently completed
-                        a degree in Computer Science from the University of Houston and I am looking to take the next step
-                        in my career</h3>
-                    <h3>I have experience in both front-end and back-end</h3>
-
-                    <div>
-                        <a href="projects.html">
-                            <button class="btn btn-secondary btn-lg btn-space">
-                                Portfolio
-                            </button>
-                        </a>
-
-                        <a href="contact.html">
-                            <button class="btn btn-light btn-lg mobile_btn">
-                                Get in touch
-                            </button>
-                        </a>
+                <section class="contact_form ">
+                    <div class="contact_text">
+                        <h4>I am always looking for new and exciting opportunities to work with companies and individuals on
+                            projects big or small</h4>
+                        <sm>Fill the form and I'll get back to you as soon as possible</sm>
                     </div>
 
-                </section>
-            </div>
-        </main>
-
-        <section class="content">
-            <section class="font">
-                <div id="recent">
-                    <a href="projects.html">
-                        <h2>
-                            <u>Recent Work</u>
-                        </h2>
-                    </a>
-
-                    <section class="work">
-                        <a href="https://www.shootbeta.com/">
-                            <img src="resources/img/shoot.JPG" alt="shoot">
-                        </a>
-                        <p>Built the company website by transforming the design into code using front-end technology such as
-                            HTML, CSS, JavaScript.</p>
-                    </section>
-                </div>
-
-                <section class="skills">
-                    <h2>
-                        <u>Skills</u>
-                    </h2>
-                    <ul>
-                        <li>Project Management</li>
-                        <li>Proffesional Communication</li>
-                        <li>Self-Starter</li>
-                    </ul>
-
-                    <section class="skill_grid">
-                        <div class="purple">
-                            <div class="lang">HTML</div>
-                        </div>
-                        <div class="purple">
-                            <div class="lang">CSS</div>
-                        </div>
-                        <div class="purple">
-                            <div class="lang">Bootstrap</div>
-                        </div>
-                        <div class="purple">
-                            <div class="lang">JavaScript</div>
-                        </div>
-                        <div class="purple">
-                            <div class="lang">Node.js</div>
-                        </div>
-                        <div class="purple">
-                            <div class="lang">PHP</div>
-                        </div>
-                    </section>
-                </section>
-
-                <section class="contact_pad">
-                    <section class="contact container-fluid">
+                    <section class="contact">
                         <h2 id="contact_heading">
                             <u>Contact Me</u>
                         </h2>
@@ -215,48 +134,51 @@
                         </form>
                     </section>
                 </section>
-            </section>
+            </div>
+        </main>
 
-            <footer>
-                <ul>
-                    <li>
-                        <a href="https://github.com/Yetunde79">Github</a>
-                    </li>
-                    <li>
-                        <a href="https://www.linkedin.com/in/yetundeadebayo/">LinkedIn</a>
-                    </li>
-                    <li>
-                        <a href="https://twitter.com/yetunde_sola?lang=en">Twitter</a>
-                    </li>
-                    <li>
-                        <a href="https://codepen.io/yetty79/">Codepen</a>
-                    </li>
+        <footer>
+            <ul>
+                <li>
+                    <a href="https://github.com/Yetunde79">Github</a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/yetundeadebayo/">LinkedIn</a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/yetunde_sola?lang=en">Twitter</a>
+                </li>
+                <li>
+                    <a href="https://codepen.io/yetty79/">Codepen</a>
+                </li>
 
-                    <li>
-                        <a href="index.html">
-                            <img src="resources/img/y.png" alt="logo">
-                        </a>
-                    </li>
+                <li>
+                    <a href="index.php">
+                        <img src="resources/img/y.png" alt="logo">
+                    </a>
+                </li>
 
-                    <li>
-                        <a href="index.html">HOME</a>
-                    </li>
-                    <li>
-                        <a href="projects.html">PROJECTS</a>
-                    </li>
-                    <li>
-                        <a href="about.html">ABOUT</a>
-                    </li>
-                    <li>
-                        <a href="contact.html">CONTACT</a>
-                    </li>
+                <li>
+                    <a href="index.php">HOME</a>
+                </li>
+                <li>
+                    <a href="projects.html">PROJECTS</a>
+                </li>
+                <li>
+                    <a href="about.html">ABOUT</a>
+                </li>
+                <li>
+                    <a href="contact.php">CONTACT</a>
+                </li>
 
-                </ul>
-                <p class="name"> &copy; Yetunde Sola-Adebayo</p>
-            </footer>
+            </ul>
 
-        </section>
+            <p class="name"> &copy; Yetunde Sola-Adebayo</p>
+        </footer>
+
     </div>
+
+
 
 
 
