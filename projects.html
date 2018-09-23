@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Home</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" type="image/png" href="resources/img/color_mark.png" />
+    <link rel="shortcut icon" type="image/png" href="resources/img/y.png" />
     <!--bootstrap css-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
@@ -44,11 +44,11 @@
                                 </li>
 
                                 <li>
-                                    <a href="resume.pdf" target="_blank">Resume</a>
+                                    <a href="contact.php">Contact</a>
                                 </li>
 
-                                <li>
-                                    <a href="contact.php">Contact</a>
+                                <li id="resume">
+                                    <a href="resume.pdf" target="_blank">Resume</a>
                                 </li>
                             </ul>
 
@@ -60,7 +60,7 @@
                     <section id="project">
 
                         <figure class="wp-caption">
-                            <a href="https://www.yettifood.com/">
+                            <a href="https://www.yettifood.com/" target="_blank">
                                 <img src="resources/img/yettifood.png" alt="blog" class="proj_img">
                                 <figcaption class="wp-caption-text">This food blog was created with Node.js, Express.js, ejs, MongoDB/Mongoose and passport.js
                                     so I can login to create posts.</figcaption>
@@ -68,14 +68,14 @@
                         </figure>
 
                         <figure class="wp-caption">
-                            <a href="https://www.shootbeta.com/">
+                            <a href="https://www.shootbeta.com/" target="_blank">
                                 <img src="resources/img/shootbeta.jpg" alt="shoot" class="proj_img">
                                 <figcaption class="wp-caption-text">Made with the team at Shoot Technologies. It was created with HTML, CSS and JavaScript.</figcaption>
                             </a>
                         </figure>
 
                         <figure class="wp-caption">
-                            <a href="https://yetundesolaadebayo.com/project/movieapp">
+                            <a href="https://yetundesolaadebayo.com/project/movieapp" target="_blank">
                                 <img src="resources/img/movie.jpg" alt="movie_app" class="proj_img">
                                 <figcaption class="wp-caption-text">A movie search app created with NodeJS, ExpressJS, CSS and the OMDb API. You can find the
                                     year released and summary of the movie.</figcaption>
@@ -83,7 +83,7 @@
                         </figure>
 
                         <figure class="wp-caption">
-                            <a href="https://yetundesolaadebayo.com/project/twitter_api/">
+                            <a href="https://yetundesolaadebayo.com/project/twitter_api/" target="_blank">
                                 <img src="resources/img/twitter.jpg" alt="twitter_client" class="proj_img">
                                 <figcaption class="wp-caption-text">A twitter client that retrieves the most popular tweets from any username. It was created
                                     with Twitter API, HTML, CSS and PHP.</figcaption>
@@ -91,7 +91,7 @@
                         </figure>
 
                         <figure class="wp-caption">
-                            <a href="https://yetundesolaadebayo.com/project/weatherchecker/">
+                            <a href="https://yetundesolaadebayo.com/project/weatherchecker/" target="_blank">
                                 <img src="resources/img/weather.jpg" alt="weather" class="proj_img">
                                 <figcaption class="wp-caption-text">A website that finds the weather in any city. It was created with OpenWeatherMap API, HTML,
                                     CSS and PHP</figcaption>
@@ -104,42 +104,51 @@
         </main>
     </div>
 
-    <footer>
-        <ul>
-            <li>
-                <a href="https://github.com/Yetunde79">Github</a>
-            </li>
-            <li>
-                <a href="https://www.linkedin.com/in/yetundeadebayo/">LinkedIn</a>
-            </li>
-            <li>
-                <a href="https://twitter.com/yetunde_sola?lang=en">Twitter</a>
-            </li>
-            <li>
-                <a href="https://codepen.io/yetty79/">Codepen</a>
-            </li>
+    <footer class="bg">
+        <a href="index.php" class="logo">
+            <img src="resources/img/y.png" alt="logo">
+        </a>
 
-            <li>
-                <a href="index.php">
-                    <img src="resources/img/y.png" alt="logo">
-                </a>
-            </li>
+        <div class="list">
+            <ul>
+                <li>
+                    <a href="https://github.com/Yetunde79">Github</a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/yetundeadebayo/">LinkedIn</a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/yetunde_sola?lang=en">Twitter</a>
+                </li>
+                <li>
+                    <a href="https://medium.com/@ysolaadebayo">Medium</a>
+                </li>
+                <li>
+                    <a href="https://codepen.io/yetty79/">Codepen</a>
+                </li>
 
-            <li>
-                <a href="index.php">HOME</a>
-            </li>
-            <li>
-                <a href="projects.html">PROJECTS</a>
-            </li>
-            <li>
-                <a href="about.html">ABOUT</a>
-            </li>
-            <li>
-                <a href="contact.php">CONTACT</a>
-            </li>
+            </ul>
 
-        </ul>
+            <ul>
+                <li>
+                    <a href="index.php">HOME</a>
+                </li>
+                <li>
+                    <a href="projects.html">PROJECTS</a>
+                </li>
+                <li>
+                    <a href="about.html">ABOUT</a>
+                </li>
+                <li>
+                    <a href="contact.php">CONTACT</a>
+                </li>
 
+                <li id="resume">
+                    <a href="resume.pdf" target="_blank">RESUME</a>
+                </li>
+
+            </ul>
+        </div>
         <p class="name"> &copy; Yetunde Sola-Adebayo</p>
     </footer>
 

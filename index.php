@@ -1,15 +1,31 @@
-<!-- <?php
+<?php
 
-		$name = $_POST['name'];
-		$email = $_POST['email'];
-		$message = $_POST['message'];
-		$from = 'From: yetunde@yetundesolaadebayo.com';
-		$to = 'ysolaadebayo@gmail.com'; 
-		$subject = $_POST['subject'];
-		
-		 $body = "From: $name\n E-Mail: $email\n Message:\n $message";
+if(isset($_POST['name']))
+{
+    $name = $_POST['name'];
+}
 
-          if ($_POST["submit"]) {
+if(isset($_POST['email'])){
+    $email = $_POST['email'];
+}
+
+if(isset($_POST['message'])){
+    $message = $_POST['message'];
+}
+
+if(isset($_POST['subject'])){
+    $subject = $_POST['subject'];
+}
+
+
+
+          if (isset($_POST["submit"])) {
+
+            $from = 'From: yetunde@yetundesolaadebayo.com';
+            $to = 'ysolaadebayo@gmail.com'; 
+    
+             $body = "From: $name\n E-Mail: $email\n Message:\n $message";
+
              if (!$_POST["email"]) {
             
               echo "<script>alert('The email field is required');</script>";
@@ -17,9 +33,7 @@
 			}
             
             if (!$_POST["name"]) {
-            
               echo "<script>alert('The name field is required');</script>";
-            
 			}
         
         if (!$_POST["message"]) {
@@ -36,7 +50,7 @@
 		}
 	}
       
-?> -->
+?>
 
 <!DOCTYPE html>
 <html>
@@ -46,7 +60,51 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Home</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" type="image/png" href="resources/img/color_mark.png" />
+    <link rel="shortcut icon" type="image/png" href="resources/img/y.png" />
+
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121421317-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-121421317-1');
+    </script>
+  
+  <!-- Hotjar Tracking Code for https://yetundesolaadebayo.com/ -->
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:945072,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="keywords" content="HTML, CSS, HTML, PHP, JavaScript, Portfolio, Web developer, Resume, Job, Freelancer, Freelance Web developer, Yetunde Sola-Adebayo">
+	<meta property="og:title" content="Yetunde Sola-Adebayo">
+    <meta name="author" content="Yetunde Sola-Adebayo">
+    <meta property="og:locale" content="en_US">
+    <meta name="description" content="Web Developer seeking job opportunities">
+    <meta property="og:description" content="Web Developer">
+    <link rel="canonical" href="https://yetundesolaadebayo.com/">
+    <meta property="og:url" content="https://yetundesolaadebayo.com/">
+    <meta property="og:site_name" content="Yetunde Sola-Adebayo">
+	<meta property="og:image" content="https://yetundesolaadebayo.com/resources/img/me.jpg">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="">
+    <meta name="twitter:creator" content="@yetunde_sola">
+    <meta name="twitter:title" content="Yetunde Sola-Adebayo">
+    <meta name="twitter:description" content="I am a self-taught web developer that has a degree in Computer Science. I am a fast learner, I learnt 3 languages in 3 months. I am passionate about my work and this allows be to be efficient.">
+	<meta name="twitter:image" content="https://yetundesolaadebayo.com/resources/img/me.jpg">
+    <meta name="twitter:image:alt" content="Yetunde Sola-Adebayo">
+    
     <!--bootstrap css-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
@@ -88,20 +146,20 @@
                                 </li>
 
                                 <li>
+                                    <a href="contact.php">Contact</a>
+                                </li>
+
+                                <li id="resume">
                                     <a href="resume.pdf" target="_blank">Resume</a>
                                 </li>
 
-                                <li>
-                                    <a href="contact.php">Contact</a>
-                                </li>
                             </ul>
 
                         </nav>
                     </section>
 
-                    <a href="index.php">
                         <img id="full_logo" src="resources/img/logo.png" alt="logo">
-                    </a>
+
                 </header>
 
 
@@ -155,7 +213,7 @@
                     </h2>
                     <ul>
                         <li>Project Management</li>
-                        <li>Proffesional Communication</li>
+                        <li>Professional Communication</li>
                         <li>Self-Starter</li>
                     </ul>
 
@@ -187,7 +245,7 @@
                             <u>Contact Me</u>
                         </h2>
 
-                        <form>
+                        <form method="POST" action="index.php">
                             <div class="form-group">
                                 <label>Name</label>
                                 <input type="text" class="form-control" id="name" placeholder="Name" name="name">
@@ -205,7 +263,7 @@
 
                             <div class="form-group">
                                 <label>Message</label>
-                                <textarea class="form-control" name="message" placeholder="Type your message here"></textarea>
+                                <textarea rows="10" class="form-control" name="message" placeholder="Type your message here"></textarea>
                             </div>
 
                             <div class="text-center">
@@ -217,43 +275,53 @@
                 </section>
             </section>
 
-            <footer>
-                <ul>
-                    <li>
-                        <a href="https://github.com/Yetunde79">Github</a>
-                    </li>
-                    <li>
-                        <a href="https://www.linkedin.com/in/yetundeadebayo/">LinkedIn</a>
-                    </li>
-                    <li>
-                        <a href="https://twitter.com/yetunde_sola?lang=en">Twitter</a>
-                    </li>
-                    <li>
-                        <a href="https://codepen.io/yetty79/">Codepen</a>
-                    </li>
+    <footer>
+        <a href="index.php" class="logo">
+            <img src="resources/img/y.png" alt="logo">
+        </a>
 
-                    <li>
-                        <a href="index.php">
-                            <img src="resources/img/y.png" alt="logo">
-                        </a>
-                    </li>
+        <div class="list">
+            <ul>
+                <li>
+                    <a href="https://github.com/Yetunde79">Github</a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/yetundeadebayo/">LinkedIn</a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/yetunde_sola?lang=en">Twitter</a>
+                </li>
+                <li>
+                    <a href="https://medium.com/@ysolaadebayo">Medium</a>
+                </li>
+                <li>
+                    <a href="https://codepen.io/yetty79/">Codepen</a>
+                </li>
 
-                    <li>
-                        <a href="index.php">HOME</a>
-                    </li>
-                    <li>
-                        <a href="projects.html">PROJECTS</a>
-                    </li>
-                    <li>
-                        <a href="about.html">ABOUT</a>
-                    </li>
-                    <li>
-                        <a href="contact.php">CONTACT</a>
-                    </li>
+            </ul>
 
-                </ul>
-                <p class="name"> &copy; Yetunde Sola-Adebayo</p>
-            </footer>
+            <ul>
+                <li>
+                    <a href="index.php">HOME</a>
+                </li>
+                <li>
+                    <a href="projects.html">PROJECTS</a>
+                </li>
+                <li>
+                    <a href="about.html">ABOUT</a>
+                </li>
+                <li>
+                    <a href="contact.php">CONTACT</a>
+                </li>
+
+                <li id="resume">
+                    <a href="resume.pdf" target="_blank">RESUME</a>
+                </li>
+
+            </ul>
+        </div>
+        <p class="name"> &copy; Yetunde Sola-Adebayo</p>
+    </footer>
 
         </section>
     </div>

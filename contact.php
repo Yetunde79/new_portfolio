@@ -1,15 +1,31 @@
- <?php
+<?php
 
-		$name = $_POST['name'];
-		$email = $_POST['email'];
-		$message = $_POST['message'];
-		$from = 'From: yetunde@yetundesolaadebayo.com';
-		$to = 'ysolaadebayo@gmail.com'; 
-		$subject = $_POST['subject'];
-		
-		 $body = "From: $name\n E-Mail: $email\n Message:\n $message";
+if(isset($_POST['name']))
+{
+    $name = $_POST['name'];
+}
 
-          if ($_POST["submit"]) {
+if(isset($_POST['email'])){
+    $email = $_POST['email'];
+}
+
+if(isset($_POST['message'])){
+    $message = $_POST['message'];
+}
+
+if(isset($_POST['subject'])){
+    $subject = $_POST['subject'];
+}
+
+
+
+          if (isset($_POST["submit"])) {
+
+            $from = 'From: yetunde@yetundesolaadebayo.com';
+            $to = 'ysolaadebayo@gmail.com'; 
+    
+             $body = "From: $name\n E-Mail: $email\n Message:\n $message";
+
              if (!$_POST["email"]) {
             
               echo "<script>alert('The email field is required');</script>";
@@ -17,9 +33,7 @@
 			}
             
             if (!$_POST["name"]) {
-            
               echo "<script>alert('The name field is required');</script>";
-            
 			}
         
         if (!$_POST["message"]) {
@@ -36,7 +50,7 @@
 		}
 	}
       
-?> 
+?>
 
 <!DOCTYPE html>
 <html>
@@ -46,7 +60,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Home</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" type="image/png" href="resources/img/color_mark.png" />
+    <link rel="shortcut icon" type="image/png" href="resources/img/y.png" />
     <!--bootstrap css-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
@@ -83,12 +97,13 @@
                                 </li>
 
                                 <li>
+                                    <a href="contact.php">Contact</a>
+                                </li>
+
+                                <li id="resume">
                                     <a href="resume.pdf" target="_blank">Resume</a>
                                 </li>
 
-                                <li>
-                                    <a href="contact.php">Contact</a>
-                                </li>
                             </ul>
                         </nav>
                     </section>
@@ -106,7 +121,7 @@
                             <u>Contact Me</u>
                         </h2>
 
-                        <form>
+                        <form method="POST" action="contact.php">
                             <div class="form-group">
                                 <label>Name</label>
                                 <input type="text" class="form-control" id="name" placeholder="Name" name="name">
@@ -124,7 +139,7 @@
 
                             <div class="form-group">
                                 <label>Message</label>
-                                <textarea class="form-control" name="message" placeholder="Type your message here"></textarea>
+                                <textarea rows="5" class="form-control" name="message" placeholder="Type your message here"></textarea>
                             </div>
 
                             <div class="text-center">
@@ -137,7 +152,12 @@
             </div>
         </main>
 
-        <footer>
+    <footer>
+        <a href="index.php" class="logo">
+            <img src="resources/img/y.png" alt="logo">
+        </a>
+
+        <div class="list">
             <ul>
                 <li>
                     <a href="https://github.com/Yetunde79">Github</a>
@@ -149,15 +169,15 @@
                     <a href="https://twitter.com/yetunde_sola?lang=en">Twitter</a>
                 </li>
                 <li>
+                    <a href="https://medium.com/@ysolaadebayo">Medium</a>
+                </li>
+                <li>
                     <a href="https://codepen.io/yetty79/">Codepen</a>
                 </li>
 
-                <li>
-                    <a href="index.php">
-                        <img src="resources/img/y.png" alt="logo">
-                    </a>
-                </li>
+            </ul>
 
+            <ul>
                 <li>
                     <a href="index.php">HOME</a>
                 </li>
@@ -171,10 +191,14 @@
                     <a href="contact.php">CONTACT</a>
                 </li>
 
-            </ul>
+                <li id="resume">
+                    <a href="resume.pdf" target="_blank">RESUME</a>
+                </li>
 
-            <p class="name"> &copy; Yetunde Sola-Adebayo</p>
-        </footer>
+            </ul>
+        </div>
+        <p class="name"> &copy; Yetunde Sola-Adebayo</p>
+    </footer>
 
     </div>
 
