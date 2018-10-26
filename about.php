@@ -34,14 +34,18 @@
                             </li>
 
                             <li>
-                                <a href="projects.html">Projects</a>
+                                <a href="about.php">About</a>
+                            </li>
+
+                             <li>
+                                <a href="services.php">Services</a>
                             </li>
 
                             <li>
                                 <a href="contact.php">Contact</a>
                             </li>
 
-                            <li id="resume">
+                            <li>
                                 <a href="resume.pdf" target="_blank">Resume</a>
                             </li>
 
@@ -66,7 +70,7 @@
                         </button>
                     </a>
 
-                    <p>I am currently looking for employment in the Houston area or freelance work. Take a look at my resume
+                    <p>I am currently looking for employment or freelance work. Take a look at my resume
                         and feel free to contact me, I would love to hear from you.
                     </p>
 
@@ -88,21 +92,20 @@
         <div class="list">
             <ul>
                 <li>
-                    <a href="https://github.com/Yetunde79">Github</a>
+                    <a href="https://github.com/Yetunde79" target="_blank">Github</a>
                 </li>
                 <li>
-                    <a href="https://www.linkedin.com/in/yetundeadebayo/">LinkedIn</a>
+                    <a href="https://www.linkedin.com/in/yetundeadebayo/" target="_blank">LinkedIn</a>
                 </li>
                 <li>
-                    <a href="https://twitter.com/yetunde_sola?lang=en">Twitter</a>
+                    <a href="https://twitter.com/yettythedev?lang=en" target="_blank">Twitter</a>
                 </li>
                 <li>
-                    <a href="https://medium.com/@ysolaadebayo">Medium</a>
+                    <a href="https://medium.com/@ysolaadebayo" target="_blank">Medium</a>
                 </li>
                 <li>
-                    <a href="https://codepen.io/yetty79/">Codepen</a>
+                    <a href="privacy.php" class="privacy" target="_blank">Privacy Policy</a>
                 </li>
-
             </ul>
 
             <ul>
@@ -110,19 +113,17 @@
                     <a href="index.php">HOME</a>
                 </li>
                 <li>
-                    <a href="projects.html">PROJECTS</a>
-                </li>
-                <li>
-                    <a href="about.html">ABOUT</a>
+                    <a href="about.php">ABOUT</a>
                 </li>
                 <li>
                     <a href="contact.php">CONTACT</a>
                 </li>
-
-                <li id="resume">
+                <li>
+                    <a href="services.php">SERVICES</a>
+                </li>
+                <li>
                     <a href="resume.pdf" target="_blank">RESUME</a>
                 </li>
-
             </ul>
         </div>
         <p class="name"> &copy; Yetunde Sola-Adebayo</p>
