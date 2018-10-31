@@ -98,7 +98,7 @@
                     <a href="https://www.linkedin.com/in/yetundeadebayo/" target="_blank">LinkedIn</a>
                 </li>
                 <li>
-                    <a href="https://twitter.com/yettythedev?lang=en" target="_blank">Twitter</a>
+                    <a href="https://twitter.com/yetunde_sola?lang=en" target="_blank">Twitter</a>
                 </li>
                 <li>
                     <a href="https://medium.com/@ysolaadebayo" target="_blank">Medium</a>

@@ -108,13 +108,15 @@
                                 <h5>Starting from $700</h5>
                                 <p class="details">This is for individuals or businesses that already have websites</p>
 
-                                <p class="bold">Included in the service:</p>
-                                <ul class="nodot">
-                                    <li>Mobile Responsive Website</li>
-                                    <li>Social Media Integration</li>
-                                    <li>Basic SEO</li>
-                                    <li>Customer Service</li>
-                                </ul>
+                                <div class="included">
+                                    <p class="bold">Included in the service:</p>
+                                    <ul class="nodot">
+                                        <li>Mobile Responsive Website</li>
+                                        <li>Social Media Integration</li>
+                                        <li>Basic SEO</li>
+                                        <li>Customer Service</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                         </div>
@@ -133,6 +135,7 @@
 
                                 <h5>$100/month</h5>
                                 <p class="details">Monthly maintenance for businesses or graphic designer</p>
+
 
                                 <p class="bold">Included in the service:</p>
                                 <ul class="nodot">
@@ -160,7 +163,7 @@
     <section class="questionnaire">
         <h1 class="service_text">BOOKING</h1>
         <p>Thank you for your interest in working together!</p>
-        <h3>Steps to booking quality development</h3>		
+        <h3 class="booking">Steps to booking quality development</h3>		
                 <ul class="nodot">
                     <li>
                         <a href="https://yetundesolaadebayo.typeform.com/to/baXWvR">New Client questionnaire</a>
@@ -191,7 +194,7 @@
                             <a href="https://www.linkedin.com/in/yetundeadebayo/" target="_blank">LinkedIn</a>
                         </li>
                         <li>
-                            <a href="https://twitter.com/yettythedev?lang=en" target="_blank">Twitter</a>
+                            <a href="https://twitter.com/yetunde_sola?lang=en" target="_blank">Twitter</a>
                         </li>
                         <li>
                             <a href="https://medium.com/@ysolaadebayo" target="_blank">Medium</a>

@@ -44,11 +44,12 @@
   color: #4974a5;
 }
 
-.packages {
-}
-
 .nodot {
-  list-style: none;
+  list-style-image: url("/resources/img/map-icons_3-0-0_location-arrow_25_0_551a8b_none.png");
+  list-style-type: disc;
+  list-style-position: inside;
+  margin: 0;
+  padding: 0;
   text-align: center;
 }
 
@@ -65,4 +66,14 @@
   justify-items: center;
   align-items: center;
   padding-bottom: 10%;
+}
+
+@media (min-width: 300px) and (max-width: 449px) {
+  .questionnaire {
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+  .booking {
+    font-size: 1.2em;
+  }
 }

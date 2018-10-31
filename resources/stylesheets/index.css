@@ -96,12 +96,14 @@ skills {
   padding-left: 10%;
   padding-right: 10%;
 }
+
 .lang {
   height: 50%;
   left: 15%;
   position: absolute;
   top: 40%;
   width: 50%;
+  color: #fff;
 }
 #html,
 #node,

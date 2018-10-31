@@ -173,7 +173,7 @@ if(isset($_POST['subject'])){
                         </nav>
                     </section>
 
-                    <img id="full_logo" src="resources/img/logo.png" alt="logo">
+                    <a href="index.php"><img id="full_logo" src="resources/img/logo.png" alt="logo"></a>
 
                 </header>
 
@@ -244,12 +244,12 @@ if(isset($_POST['subject'])){
                             </a>
                         </figure>
 
-                        <!-- <figure class="wp-caption">
-                            <a href="https://yetundesolaadebayo.com/project/twitter_api/" target="_blank">
-                                <img src="resources/img/twitter.jpg" alt="twitter_client" class="proj_img">
-                                <figcaption class="wp-caption-text">A twitter client that retrieves the most popular tweets from any username. It was created with Twitter API, HTML, CSS and PHP.</figcaption>
-                            </a>
-                        </figure> -->
+                        <!-- // <figure class="wp-caption">
+                        //     <a href="https://yetundesolaadebayo.com/project/twitter_api/" target="_blank">
+                        //         <img src="resources/img/twitter.jpg" alt="twitter_client" class="proj_img">
+                        //         <figcaption class="wp-caption-text">A twitter client that retrieves the most popular tweets from any username. It was created with Twitter API, HTML, CSS and PHP.</figcaption>
+                        //     </a>
+                        // </figure> -->
 
                         <figure class="wp-caption">
                             <a href="https://yetundesolaadebayo.com/project/weatherchecker/" target="_blank">
@@ -346,7 +346,7 @@ if(isset($_POST['subject'])){
                             <a href="https://www.linkedin.com/in/yetundeadebayo/" target="_blank">LinkedIn</a>
                         </li>
                         <li>
-                            <a href="https://twitter.com/yettythedev?lang=en" target="_blank">Twitter</a>
+                            <a href="https://twitter.com/yetunde_sola?lang=en" target="_blank">Twitter</a>
                         </li>
                         <li>
                             <a href="https://medium.com/@ysolaadebayo" target="_blank">Medium</a>

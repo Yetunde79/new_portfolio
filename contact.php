@@ -111,7 +111,7 @@ if(isset($_POST['subject'])){
 
                 <section class="contact_form ">
                     <div class="contact_text">
-                        <h4>I am always looking for new and exciting opportunities to work with companies and individuals on
+                        <h4 class="purple">I am always looking for new and exciting opportunities to work with companies and individuals on
                             projects big or small</h4>
                         <sm>Fill the form and I'll get back to you as soon as possible</sm>
                     </div>
@@ -166,7 +166,7 @@ if(isset($_POST['subject'])){
                     <a href="https://www.linkedin.com/in/yetundeadebayo/" target="_blank">LinkedIn</a>
                 </li>
                 <li>
-                    <a href="https://twitter.com/yettythedev?lang=en" target="_blank">Twitter</a>
+                    <a href="https://twitter.com/yetunde_sola?lang=en" target="_blank">Twitter</a>
                 </li>
                 <li>
                     <a href="https://medium.com/@ysolaadebayo" target="_blank">Medium</a>
