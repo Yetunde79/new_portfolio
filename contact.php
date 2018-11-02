@@ -116,7 +116,7 @@ if(isset($_POST['subject'])){
                         <sm>Fill the form and I'll get back to you as soon as possible</sm>
                     </div>
 
-                    <section class="contact">
+                    <section class="contact purplebg">
                         <h2 id="contact_heading">
                             <u>Contact Me</u>
                         </h2>

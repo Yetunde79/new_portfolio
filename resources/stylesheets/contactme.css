@@ -4,13 +4,16 @@
   background-size: cover;
 }
 .contact {
-  background-color: #f4e9f8;
   border: 1px solid silver;
   border-radius: 10px;
-  color: #7b6986;
   height: auto;
   padding-bottom: 2%;
   width: 50%;
+}
+
+.purplebg {
+  background-color: #f4e9f8;
+  color: #7b6986;
 }
 
 .contact form {
