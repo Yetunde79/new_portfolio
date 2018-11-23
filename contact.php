@@ -8,7 +8,7 @@ if(filter_has_var(INPUT_POST, 'submit')){
     // Get Form Data
     $name = htmlspecialchars($_POST['name']);
     $email = htmlspecialchars($_POST['email']);
-    $subject = htmlspecialchars($_POST['subject']). "(from my website)";
+    $subject = htmlspecialchars($_POST['subject']);
     $message = htmlspecialchars($_POST['message']);
 
     // Check Required Fields
@@ -22,7 +22,7 @@ if(filter_has_var(INPUT_POST, 'submit')){
         } else {
             // Passed
             $toEmail = 'ysolaadebayo@gmail.com';
-            $body = '<h2>Contact Request</h2>
+            $body = '<h2>Contact Request from my website</h2>
                 <h4>Name</h4><p>'.$name.'</p>
                 <h4>Email</h4><p>'.$email.'</p>
                 <h4>Message</h4><p>'.$message.'</p>
@@ -128,22 +128,22 @@ if(filter_has_var(INPUT_POST, 'submit')){
                         <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
                             <div class="form-group">
                                 <label>Name</label>
-                                <input type="text" class="form-control" id="name" placeholder="Name" name="name" value="<?php echo isset($_POST['name']) ? $name : ''; ?>">
+                                <input type="text" class="form-control" id="name" placeholder="Name" name="name">
                             </div>
 
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Email</label>
-                                <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email" value="<?php echo isset($_POST['email']) ? $email : ''; ?>">
+                                <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
                             </div>
 
                             <div class="form-group">
                                 <label>Subject</label>
-                                <input type="text" class="form-control" id="subject" placeholder="Subject" name="subject" value="<?php echo isset($_POST['subject']) ? $email : ''; ?>">
+                                <input type="text" class="form-control" id="subject" placeholder="Subject" name="subject">
                             </div>
 
                             <div class="form-group">
                                 <label>Message</label>
-                                <textarea rows="5" class="form-control" name="message" placeholder="Type your message here"><?php echo isset($_POST['message']) ? $message : ''; ?></textarea>
+                                <textarea rows="5" class="form-control" name="message" placeholder="Type your message here"></textarea>
                             </div>
 
                             <div class="text-center">
