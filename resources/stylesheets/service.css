@@ -15,12 +15,19 @@
   text-align: center;
 }
 
+.center {
+  display: grid;
+  grid-template-rows: auto;
+  justify-items: center;
+  align-items: center;
+}
+
 .sm {
   font-size: 0.85em;
 }
 
 .align-center {
-  text-align: center;
+  /* text-align: center; */
   background-color: #fff;
   color: #000;
   padding: 70px;
@@ -47,12 +54,14 @@
 .nodot {
   list-style-image: url("/resources/img/map-icons_3-0-0_location-arrow_25_0_551a8b_none.png");
   list-style-type: disc;
-  list-style-position: inside;
   margin: 0;
-  padding: 0;
-  text-align: center;
+  padding-left: 0;
+  display: inline-block;
 }
 
+.nodot li {
+  list-style-position: inside;
+}
 .bold {
   font-weight: bold;
 }

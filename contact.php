@@ -1,55 +1,56 @@
 <?php
+// Message Vars
+$msg = '';
+$msgClass = '';
 
-if(isset($_POST['name']))
-{
-    $name = $_POST['name'];
-}
+// Check For Submit
+if(filter_has_var(INPUT_POST, 'submit')){
+    // Get Form Data
+    $name = htmlspecialchars($_POST['name']);
+    $email = htmlspecialchars($_POST['email']);
+    $subject = htmlspecialchars($_POST['subject']). "(from my website)";
+    $message = htmlspecialchars($_POST['message']);
 
-if(isset($_POST['email'])){
-    $email = $_POST['email'];
-}
+    // Check Required Fields
+    if(!empty($email) && !empty($name) && !empty($message)){
+        // Passed
+        // Check Email
+        if(filter_var($email, FILTER_VALIDATE_EMAIL) === false){
+            // Failed
+            $msg = 'Please use a valid email';
+            $msgClass = 'alert-danger';
+        } else {
+            // Passed
+            $toEmail = 'ysolaadebayo@gmail.com';
+            $body = '<h2>Contact Request</h2>
+                <h4>Name</h4><p>'.$name.'</p>
+                <h4>Email</h4><p>'.$email.'</p>
+                <h4>Message</h4><p>'.$message.'</p>
+            ';
 
-if(isset($_POST['message'])){
-    $message = $_POST['message'];
-}
+            // Email Headers
+            $headers = "MIME-Version: 1.0" ."\r\n";
+            $headers .="Content-Type:text/html;charset=UTF-8" . "\r\n";
 
-if(isset($_POST['subject'])){
-    $subject = $_POST['subject'];
-}
+            // Additional Headers
+            $headers .= "From: " .$name. "<".$email.">". "\r\n";
 
-
-
-          if (isset($_POST["submit"])) {
-
-            $from = 'From: yetunde@yetundesolaadebayo.com';
-            $to = 'ysolaadebayo@gmail.com'; 
-    
-             $body = "From: $name\n E-Mail: $email\n Message:\n $message";
-
-             if (!$_POST["email"]) {
-            
-              echo "<script>alert('The email field is required');</script>";
-            
-			}
-            
-            if (!$_POST["name"]) {
-              echo "<script>alert('The name field is required');</script>";
-			}
-        
-        if (!$_POST["message"]) {
-            
-            echo "The content field is required.";
-            
+            if(mail($toEmail, $subject, $body, $headers)){
+                // Email Sent
+                $msg = 'Your email has been sent';
+                $msgClass = 'alert-success';
+            } else {
+                // Failed
+                $msg = 'Your email was not sent';
+                $msgClass = 'alert-danger';
+            }
         }
-        else{
-			if (mail ($to, $subject, $body, $from)) { 
-				 echo "<script>alert('Email sent successfully');</script>";
-			} else { 
-				echo "<script>alert('The email could not be sent');</script>";
-			}
-		}
-	}
-      
+    } else {
+        // Failed
+        $msg = 'Please fill in all fields';
+        $msgClass = 'alert-danger';
+    }
+}
 ?>
 
 <!DOCTYPE html>
@@ -120,26 +121,29 @@ if(isset($_POST['subject'])){
                         <h2 id="contact_heading">
                             <u>Contact Me</u>
                         </h2>
+                        <?php if($msg != ''): ?>
+                            <div class="alert <?php echo $msgClass; ?>"><?php echo $msg; ?></div>
+                        <?php endif; ?>
 
-                        <form method="POST" action="contact.php">
+                        <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
                             <div class="form-group">
                                 <label>Name</label>
-                                <input type="text" class="form-control" id="name" placeholder="Name" name="name">
+                                <input type="text" class="form-control" id="name" placeholder="Name" name="name" value="<?php echo isset($_POST['name']) ? $name : ''; ?>">
                             </div>
 
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Email</label>
-                                <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+                                <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email" value="<?php echo isset($_POST['email']) ? $email : ''; ?>">
                             </div>
 
                             <div class="form-group">
                                 <label>Subject</label>
-                                <input type="text" class="form-control" id="subject" placeholder="Subject" name="subject">
+                                <input type="text" class="form-control" id="subject" placeholder="Subject" name="subject" value="<?php echo isset($_POST['subject']) ? $email : ''; ?>">
                             </div>
 
                             <div class="form-group">
                                 <label>Message</label>
-                                <textarea rows="5" class="form-control" name="message" placeholder="Type your message here"></textarea>
+                                <textarea rows="5" class="form-control" name="message" placeholder="Type your message here"><?php echo isset($_POST['message']) ? $message : ''; ?></textarea>
                             </div>
 
                             <div class="text-center">

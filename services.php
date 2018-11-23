@@ -69,7 +69,7 @@
                             <div class="wow bounceIn" data-wow-offset="0" data-wow-delay="1.0s">
                             <div class="align-center">
 
-                                <h3 class="service_text">Development from Scratch</h3>		
+                                <a href="https://yetundesolaadebayo.typeform.com/to/baXWvR"><h3 class="service_text">Development from Scratch</h3></a>		
 
                                 <div class="icon">
                                     <i class="fa fa-code fa-3x"></i>
@@ -82,13 +82,14 @@
                                 <p class="details">This is for individuals, businesses or designers that need a website for themselves or clients</p>
                                 
                                 <p class="bold">Included in the service:</p>
+                                <div class="center">
                                 <ul class="nodot">
                                     <li>Mobile Responsive Website</li>
                                     <li>Social Media Integration</li>
                                     <li>Basic SEO</li>
                                     <li>Customer Service</li>
-                                  
                                 </ul>
+                                </div>
                             </div>
                         </div>
                         </div>
@@ -99,7 +100,7 @@
                             <div class="wow bounceIn" data-wow-offset="0" data-wow-delay="1.0s">
                             <div class="align-center">
 
-                                <h3 class="service_text"> Website Redevelopment</h3>		
+                                <a href="https://yetundesolaadebayo.typeform.com/to/baXWvR"><h3 class="service_text"> Website Redevelopment</h3></a>		
 
                                 <div class="icon">
                                     <i class="fa fa-refresh fa-3x" aria-hidden="true"></i>
@@ -110,12 +111,14 @@
 
                                 <div class="included">
                                     <p class="bold">Included in the service:</p>
+                                    <div class="center">
                                     <ul class="nodot">
                                         <li>Mobile Responsive Website</li>
                                         <li>Social Media Integration</li>
                                         <li>Basic SEO</li>
                                         <li>Customer Service</li>
                                     </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -127,7 +130,7 @@
                             <div class="wow bounceIn" data-wow-offset="0" data-wow-delay="1.0s">
                             <div class="align-center">
 
-                                <h3 class="service_text">Back pocket developer</h3>		
+                                <a href="https://yetundesolaadebayo.typeform.com/to/baXWvR"><h3 class="service_text">Back pocket developer</h3></a>	
 
                                 <div class="icon">
                                     <i class="fa fa-get-pocket fa-3x" aria-hidden="true"></i>
@@ -138,13 +141,15 @@
 
 
                                 <p class="bold">Included in the service:</p>
-                                <ul class="nodot">
-                                    <li>Taking care of coding, tech and maintenance tasks for 5 hours every month</li>
-                                    <li>Discounted rate</li>
-                                    <li>Rollover hours from month-to-month</li>
-                                    <li>Ability to easily assign and manage tasks anytime</li>
-                                    <li>Customer Service</li>
-                                </ul>
+                                    <div class="center">
+                                    <ul class="nodot">
+                                        <li>Taking care of coding, tech and maintenance tasks for 5 hours every month</li>
+                                        <li>Discounted rate</li>
+                                        <li>Rollover hours from month-to-month</li>
+                                        <li>Ability to easily assign and manage tasks anytime</li>
+                                        <li>Customer Service</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                         </div>

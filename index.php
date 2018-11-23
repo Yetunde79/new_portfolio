@@ -1,56 +1,3 @@
-<?php
-
-if(isset($_POST['name']))
-{
-    $name = $_POST['name'];
-}
-
-if(isset($_POST['email'])){
-    $email = $_POST['email'];
-}
-
-if(isset($_POST['message'])){
-    $message = $_POST['message'];
-}
-
-if(isset($_POST['subject'])){
-    $subject = $_POST['subject'];
-}
-
-
-
-          if (isset($_POST["submit"])) {
-
-            $from = 'From: yetunde@yetundesolaadebayo.com';
-            $to = 'ysolaadebayo@gmail.com'; 
-    
-             $body = "From: $name\n E-Mail: $email\n Message:\n $message";
-
-             if (!$_POST["email"]) {
-            
-              echo "<script>alert('The email field is required');</script>";
-            
-			}
-            
-            if (!$_POST["name"]) {
-              echo "<script>alert('The name field is required');</script>";
-			}
-        
-        if (!$_POST["message"]) {
-            
-            echo "The content field is required.";
-            
-        }
-        else{
-			if (mail ($to, $subject, $body, $from)) { 
-				 echo "<script>alert('Email sent successfully');</script>";
-			} else { 
-				echo "<script>alert('The email could not be sent');</script>";
-			}
-		}
-	}
-      
-?>
 
 <!DOCTYPE html>
 <html>
@@ -222,7 +169,7 @@ if(isset($_POST['subject'])){
                         </figure>
 
                         <figure class="wp-caption">
-                            <a href="https://www.yettifood.com/" target="_blank">
+                            <a href="http://www.yettifood.com/" target="_blank">
                                 <img src="resources/img/yettifood.jpg" alt="blog" class="proj_img">
                                 <figcaption class="wp-caption-text">This food blog was created with Node.js, Express.js, ejs, MongoDB/Mongoose and passport.js
                                     so I can login to create posts.</figcaption>
