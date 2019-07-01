@@ -4,7 +4,7 @@
 }
 .summary {
   background-color: #2e0854;
-  background-image: url(https://s3.us-east-2.amazonaws.com/homebackground/home_header.jpg);
+  background-image: url(../img/home_header.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   height: auto;
@@ -84,8 +84,8 @@
 .wp-caption:hover .wp-caption-text {
   opacity: 1;
 }
-skills {
-  padding-top: 32%;
+.skills {
+  padding-top: 20%;
 }
 .skill_grid {
   display: grid;
@@ -147,6 +147,12 @@ img {
 .remove {
   display: none;
 }
+
+#more {
+  padding-top: 50px;
+  position: absolute;
+}
+
 @media (min-width: 300px) and (max-width: 449px) {
   #full_logo {
     /* margin-top: 20%; */

@@ -2,11 +2,39 @@
 <html>
 
 <head>
+       <!-- Global site tag (gtag.js) - Google Analytics -->
+       <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121421317-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-121421317-1');
+    </script>
+
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Home</title>
+    <title>About</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/png" href="resources/img/y.png" />
+    <meta name="keywords" content="HTML, CSS, HTML, PHP, JavaScript, Portfolio, Web developer, Resume, Job, Freelancer, Houston, Small business, Houston Freelance Web developer, Yetunde Sola-Adebayo">
+    <meta property="og:title" content="Yetunde Sola-Adebayo">
+    <meta name="author" content="Yetunde Sola-Adebayo">
+    <meta property="og:locale" content="en_US">
+    <meta name="description" content="Web Developer seeking job opportunities">
+    <meta property="og:description" content="Web Developer">
+    <link rel="canonical" href="https://yetundesolaadebayo.com/">
+    <meta property="og:url" content="https://yetundesolaadebayo.com/">
+    <meta property="og:site_name" content="Yetunde Sola-Adebayo">
+    <meta property="og:image" content="https://yetundesolaadebayo.com/resources/img/me.jpg">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="">
+    <meta name="twitter:creator" content="@yetunde_sola">
+    <meta name="twitter:title" content="Yetunde Sola-Adebayo">
+    <meta name="twitter:description" content="I am a self-taught web developer that has a degree in Computer Science. I am a fast learner, I am passionate about my work and this allows be to be efficient.">
+    <meta name="twitter:image" content="https://yetundesolaadebayo.com/resources/img/me.jpg">
+    <meta name="twitter:image:alt" content="Yetunde Sola-Adebayo">
+
     <!--bootstrap css-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
@@ -37,8 +65,8 @@
                                 <a href="about.php">About</a>
                             </li>
 
-                             <li>
-                                <a href="services.php">Services</a>
+                            <li>
+                                <a href="/blog">Blog</a>
                             </li>
 
                             <li>
@@ -116,10 +144,10 @@
                     <a href="about.php">ABOUT</a>
                 </li>
                 <li>
-                    <a href="contact.php">CONTACT</a>
+                    <a href="https://www.yetundesolaadebayo.com/blog/">BLOG</a>
                 </li>
                 <li>
-                    <a href="services.php">SERVICES</a>
+                    <a href="contact.php">CONTACT</a>
                 </li>
                 <li>
                     <a href="resume.pdf" target="_blank">RESUME</a>
