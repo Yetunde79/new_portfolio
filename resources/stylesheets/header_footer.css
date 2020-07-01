@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body,
 html {
   font-family: Questrial, sans-serif;
@@ -94,7 +98,10 @@ footer {
     grid-template-columns: 1fr;
   }
 }
-@media (min-width: 450px) and (max-width: 555px) {
+@media (min-width: 449px) and (max-width: 555px) {
+  .summary {
+    padding-top: 5%;
+  }
   #sidebar {
     margin-left: -180px;
   }
@@ -104,6 +111,9 @@ footer {
   }
 }
 @media (max-width: 768px) {
+  .summary {
+    padding-top: 5%;
+  }
   #sidebarCollapse {
     display: block;
   }

@@ -1,57 +1,74 @@
 <?php
-// Message Vars
-$msg = '';
-$msgClass = '';
 
-// Check For Submit
-if(filter_has_var(INPUT_POST, 'submit')){
-    // Get Form Data
-    $name = htmlspecialchars($_POST['name']);
-    $email = htmlspecialchars($_POST['email']);
-    $subject = htmlspecialchars($_POST['subject']);
-    $message = htmlspecialchars($_POST['message']);
+    use PHPMailer\PHPMailer\PHPMailer;
+    use PHPMailer\PHPMailer\Exception;
 
-    // Check Required Fields
-    if(!empty($email) && !empty($name) && !empty($message)){
-        // Passed
-        // Check Email
-        if(filter_var($email, FILTER_VALIDATE_EMAIL) === false){
-            // Failed
-            $msg = 'Please use a valid email';
+    require 'vendor/autoload.php';
+
+    $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+    $dotenv->load();
+
+    if(filter_has_var(INPUT_POST, 'submit')){
+
+        $name = htmlspecialchars($_POST['name']);
+        $email = htmlspecialchars($_POST['email']);
+        $subject = htmlspecialchars($_POST['subject']);
+        $message = htmlspecialchars($_POST['message']);
+
+        $from = 'ysolaadebayo@gmail.com';
+        $recipient = 'yetundearogers@gmail.com';
+        
+
+        $usernameSmtp = $_ENV['USER_SMTP'];
+
+        $passwordSmtp = $_ENV['PASSWORD_SMTP'];
+
+        $host = $_ENV['HOST'];
+
+        $port = $_ENV['PORT'];
+
+        $body = '<h2>Contact Request from personal website</h2>
+        <h4>Name</h4><p>'.$name.'</p>
+        <h4>Email</h4><p>'.$email.'</p>
+        <h4>Message</h4><p>'.$message.'</p>
+        ';
+
+        $mail = new PHPMailer(true);
+
+        try {
+            // Specify the SMTP settings.
+            $mail->isSMTP();
+            $mail->setFrom($from, $name);
+            $mail->Username   = $usernameSmtp;
+            $mail->Password   = $passwordSmtp;
+            $mail->Host       = $host;
+            $mail->Port       = $port;
+            $mail->SMTPAuth   = true;
+            $mail->SMTPSecure = 'tls';
+
+            $mail->addAddress($recipient);
+
+            // Specify the content of the message.
+            $mail->isHTML(true);
+            $mail->Subject    = $subject;
+            $mail->Body       = $body;
+            $mail->Send();
+            
+        // echo "Email sent!" , PHP_EOL;
+            $msg = 'Your email has been sent';
+            $msgClass = 'alert-success';
+        } catch (phpmailerException $e) {
+            //echo "An error occurred. {$e->errorMessage()}", PHP_EOL; //Catch errors from PHPMailer.
+            $msg = 'An error occurred.';
             $msgClass = 'alert-danger';
-        } else {
-            // Passed
-            $toEmail = 'ysolaadebayo@gmail.com';
-            $body = '<h2>Contact Request from my website</h2>
-                <h4>Name</h4><p>'.$name.'</p>
-                <h4>Email</h4><p>'.$email.'</p>
-                <h4>Message</h4><p>'.$message.'</p>
-            ';
-
-            // Email Headers
-            $headers = "MIME-Version: 1.0" ."\r\n";
-            $headers .="Content-Type:text/html;charset=UTF-8" . "\r\n";
-
-            // Additional Headers
-            $headers .= "From: " .$name. "<".$email.">". "\r\n";
-
-            if(mail($toEmail, $subject, $body, $headers)){
-                // Email Sent
-                $msg = 'Your email has been sent';
-                $msgClass = 'alert-success';
-            } else {
-                // Failed
-                $msg = 'Your email was not sent';
-                $msgClass = 'alert-danger';
-            }
+        } catch (Exception $e) {
+            //echo "Email not sent. {$mail->ErrorInfo}", PHP_EOL; //Catch errors from Amazon SES.h
+            $msg = 'Your email was not sent';
+            $msgClass = 'alert-danger';
         }
-    } else {
-        // Failed
-        $msg = 'Please fill in all fields';
-        $msgClass = 'alert-danger';
     }
-}
 ?>
+
 
 <!DOCTYPE html>
 <html>
@@ -73,22 +90,22 @@ if(filter_has_var(INPUT_POST, 'submit')){
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/png" href="resources/img/y.png" />
     <meta name="keywords" content="HTML, CSS, HTML, PHP, JavaScript, Portfolio, Web developer, Resume, Job, Freelancer, Houston, Small business, Houston Freelance Web developer, Yetunde Sola-Adebayo">
-    <meta property="og:title" content="Yetunde Sola-Adebayo">
-    <meta name="author" content="Yetunde Sola-Adebayo">
+    <meta property="og:title" content="Yetunde Adebayo-Rogers">
+    <meta name="author" content="Yetunde Adebayo-Rogers">
     <meta property="og:locale" content="en_US">
     <meta name="description" content="Web Developer seeking job opportunities">
     <meta property="og:description" content="Web Developer">
-    <link rel="canonical" href="https://yetundesolaadebayo.com/">
-    <meta property="og:url" content="https://yetundesolaadebayo.com/">
-    <meta property="og:site_name" content="Yetunde Sola-Adebayo">
-    <meta property="og:image" content="https://yetundesolaadebayo.com/resources/img/me.jpg">
+    <link rel="canonical" href="https://yetunderogers.com/">
+    <meta property="og:url" content="https://yetunderogers.com/">
+    <meta property="og:site_name" content="Yetunde Adebayo-Rogers">
+    <meta property="og:image" content="https://yetunderogers.com/resources/img/me.jpg">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="">
     <meta name="twitter:creator" content="@yetunde_sola">
-    <meta name="twitter:title" content="Yetunde Sola-Adebayo">
+    <meta name="twitter:title" content="Yetunde Adebayo-Rogers">
     <meta name="twitter:description" content="I am a self-taught web developer that has a degree in Computer Science. I am a fast learner, I am passionate about my work and this allows be to be efficient.">
-    <meta name="twitter:image" content="https://yetundesolaadebayo.com/resources/img/me.jpg">
-    <meta name="twitter:image:alt" content="Yetunde Sola-Adebayo">
+    <meta name="twitter:image" content="https://yetunderogers.com/resources/img/me.jpg">
+    <meta name="twitter:image:alt" content="Yetunde Adebayo-Rogers">
 
     <!--bootstrap css-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
@@ -108,7 +125,7 @@ if(filter_has_var(INPUT_POST, 'submit')){
 
                 <header>
                     <section id="navbar">
-                        <i class="fa fa-bars" id="sidebarCollapse"></i>
+                        <i class="fa fa-bars fa-2x" id="sidebarCollapse"></i>
 
                         <nav id="sidebar">
                             <ul class="list-unstyled components">
@@ -201,7 +218,7 @@ if(filter_has_var(INPUT_POST, 'submit')){
                     <a href="https://twitter.com/yetunde_sola?lang=en" target="_blank">Twitter</a>
                 </li>
                 <li>
-                    <a href="https://medium.com/@ysolaadebayo" target="_blank">Medium</a>
+                    <a href="https://medium.com/@yetundeade" target="_blank">Medium</a>
                 </li>
                 <li>
                     <a href="privacy.php" class="privacy" target="_blank">Privacy Policy</a>
@@ -217,7 +234,7 @@ if(filter_has_var(INPUT_POST, 'submit')){
                     <a href="about.php">ABOUT</a>
                 </li>
                 <li>
-                    <a href="https://www.yetundesolaadebayo.com/blog/">BLOG</a>
+                    <a href="https://www.yetunderogers.com/blog/">BLOG</a>
                 </li>
                 <li>
                     <a href="contact.php">CONTACT</a>
@@ -230,7 +247,7 @@ if(filter_has_var(INPUT_POST, 'submit')){
 
             </ul>
         </div>
-        <p class="name"> &copy; Yetunde Sola-Adebayo</p>
+        <p class="name"> &copy; Yetunde Adebayo-Rogers</p>
     </footer>
 
     </div>

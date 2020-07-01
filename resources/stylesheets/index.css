@@ -38,6 +38,9 @@
   padding-bottom: 10%;
   padding-top: 10%;
 }
+h2#portfolio {
+  text-align: center;
+}
 .work {
   display: grid;
   grid-column-gap: 25px;
@@ -85,8 +88,15 @@
   opacity: 1;
 }
 .skills {
-  padding-top: 20%;
+  padding-top: 15%;
+  text-align: center;
 }
+.skills li {
+  display: inline-block;
+  margin: 0 10px;
+  padding-bottom: 5%;
+}
+
 .skill_grid {
   display: grid;
   grid-gap: 25px;
@@ -162,8 +172,12 @@ img {
     padding-right: 0%;
     width: 100%;
   }
+  #sidebar {
+    min-width: 100px;
+  }
   h3 {
-    font-size: 1.2em;
+    font-size: 1.1em;
+    line-height: 1.43em;
   }
   .work {
     display: grid;
@@ -183,20 +197,50 @@ img {
     grid-template-rows: 1fr;
     padding-top: 15%;
   }
+  h2#portfolio {
+    text-align: left;
+  }
+  .wp-caption {
+    width: 260px;
+  }
+  .wp-caption {
+    width: 250px;
+  }
+  .wp-caption-text {
+    font-size: 14px;
+  }
+  .skills {
+    padding-top: 50%;
+  }
 }
-@media (min-width: 450px) and (max-width: 555px) {
+@media (min-width: 450px) and (max-width: 600px) {
+  .summary {
+    padding-top: 5%;
+  }
   #center {
-    padding-top: 20%;
+    padding-top: 25%;
     padding-right: 0%;
   }
   h3 {
     font-size: 1.4em;
+  }
+  #sidebar {
+    min-width: 150px;
+  }
+  h2#portfolio {
+    text-align: left;
   }
   #project {
     display: grid;
     grid-gap: 15px 15px;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
+  }
+  .wp-caption {
+    width: 260px;
+  }
+  .wp-caption-text {
+    font-size: 14px;
   }
   .work {
     display: grid;
@@ -210,6 +254,9 @@ img {
   .mobile_btn {
     font-size: 0.9em;
   }
+  .skills {
+    padding-top: 25%;
+  }
   .skill_grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -217,7 +264,15 @@ img {
     padding: 0;
   }
 }
-@media (min-width: 555px) and (max-width: 750px) {
+@media (min-width: 600px) and (max-width: 770px) {
+  .summary {
+    padding-top: 5%;
+  }
+
+  h2#portfolio {
+    text-align: left;
+  }
+
   #project {
     display: grid;
     grid-gap: 15px 15px;
@@ -225,7 +280,7 @@ img {
     grid-template-rows: 1fr 1fr;
   }
   #center {
-    padding-top: 30%;
+    padding-top: 15%;
     padding-right: 0%;
   }
   h3 {
@@ -240,20 +295,32 @@ img {
   .mobile_btn {
     font-size: 1em;
   }
+  .list {
+    grid-template-columns: 100px 100px;
+  }
 }
-@media (min-width: 751px) and (max-width: 900px) {
+@media (min-width: 771px) and (max-width: 900px) {
   #project {
     display: grid;
     grid-gap: 15px 15px;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
   }
+
+  #sidebar {
+    min-width: 100px;
+  }
 }
+
 @media (min-width: 900px) and (max-width: 1260px) {
   #project {
     display: grid;
     grid-gap: 15px 15px;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
+  }
+
+  #sidebar {
+    min-width: 100px;
   }
 }

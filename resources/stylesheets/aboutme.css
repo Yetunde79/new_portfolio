@@ -4,13 +4,18 @@
   grid-template-columns: 1fr 1fr;
   padding-top: 3%;
   text-align: left;
-  color: #000000;
+  /* color: #000000; */
 }
 img {
   height: auto;
   max-width: 100%;
   width: auto\9;
 }
+
+.about #podcast {
+  color: blue;
+}
+
 @media (min-width: 300px) and (max-width: 449px) {
   .about {
     display: grid;

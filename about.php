@@ -18,22 +18,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/png" href="resources/img/y.png" />
     <meta name="keywords" content="HTML, CSS, HTML, PHP, JavaScript, Portfolio, Web developer, Resume, Job, Freelancer, Houston, Small business, Houston Freelance Web developer, Yetunde Sola-Adebayo">
-    <meta property="og:title" content="Yetunde Sola-Adebayo">
-    <meta name="author" content="Yetunde Sola-Adebayo">
+    <meta property="og:title" content="Yetunde Adebayo-Rogers">
+    <meta name="author" content="Yetunde Adebayo-Rogers">
     <meta property="og:locale" content="en_US">
     <meta name="description" content="Web Developer seeking job opportunities">
     <meta property="og:description" content="Web Developer">
-    <link rel="canonical" href="https://yetundesolaadebayo.com/">
-    <meta property="og:url" content="https://yetundesolaadebayo.com/">
-    <meta property="og:site_name" content="Yetunde Sola-Adebayo">
-    <meta property="og:image" content="https://yetundesolaadebayo.com/resources/img/me.jpg">
+    <link rel="canonical" href="https://yetunderogers.com/">
+    <meta property="og:url" content="https://yetunderogers.com/">
+    <meta property="og:site_name" content="Yetunde Adebayo-Rogers">
+    <meta property="og:image" content="https://yetunderogers.com/resources/img/me.jpg">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="">
     <meta name="twitter:creator" content="@yetunde_sola">
-    <meta name="twitter:title" content="Yetunde Sola-Adebayo">
+    <meta name="twitter:title" content="Yetunde Adebayo-Rogers">
     <meta name="twitter:description" content="I am a self-taught web developer that has a degree in Computer Science. I am a fast learner, I am passionate about my work and this allows be to be efficient.">
-    <meta name="twitter:image" content="https://yetundesolaadebayo.com/resources/img/me.jpg">
-    <meta name="twitter:image:alt" content="Yetunde Sola-Adebayo">
+    <meta name="twitter:image" content="https://yetunderogers.com/resources/img/me.jpg">
+    <meta name="twitter:image:alt" content="Yetunde Adebayo-Rogers">
 
     <!--bootstrap css-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
@@ -52,7 +52,7 @@
 
             <header>
                 <section id="navbar">
-                    <i class="fa fa-bars" id="sidebarCollapse"></i>
+                    <i class="fa fa-bars fa-2x" id="sidebarCollapse"></i>
 
                     <nav id="sidebar">
                         <ul class="list-unstyled components">
@@ -83,26 +83,27 @@
             </header>
 
             <section class="about">
-                <img src="resources/img/me.jpg" />
+                <img src="resources/img/me.jpg" alt="image of me"/>
                 <div>
-                    <p>My name is Yetunde Sola-Adebayo and I am a UH alumna with a BSc. in Computer Science. I am passionate
-                        web development because I enjoy transforming code into art and making the web more interactive and
-                        exciting.
+                    <p>My name is Yetunde Adebayo-Rogers and I am a UH alumna with a BSc. in Computer Science. I am passionate
+                        web development because I enjoy transforming code into art and making the web better by making it more interactive, accessible
+                        and exciting. I also enjoy it because the web is fast-paced and there are always new things to learn allowing me to put my problem-solving 
+                        and creativity skills to work.
                     </p>
-                    <p>When I am not developing or learning new skills, I enjoy cooking and reading.</p>
-                    <p>If you were curious I built this website using HTML, CSS, JavaScript and Bootstrap</p>
+                    <p>When I am not developing or learning new skills, I enjoy cooking, reading, <span id="podcast"><a href="https://anchor.fm/newbtalkstech" target="_blank" alt="anchor podcast">podcasting</a></span> and gardening.</p>
+                    <p>If you were curious I built this website using HTML, CSS, PHP, JavaScript and Bootstrap. My blog is built with WordPress.</p>
 
-                    <a href="/contact.php">
+                    <a href="/contact.php" alt="contact page">
                         <button class="btn btn-outline-info">
                             Contact Me
                         </button>
                     </a>
 
-                    <p>I am currently looking for employment or freelance work. Take a look at my resume
+                    <p>I am currently looking for employment. Take a look at my resume
                         and feel free to contact me, I would love to hear from you.
                     </p>
 
-                    <a target="_blank" href="/resume.pdf">
+                    <a target="_blank" href="resume.pdf" alt="my resume">
                         <button class="btn btn-outline-info">
                             Resume
                         </button>
@@ -113,7 +114,7 @@
     </main>
 
     <footer class="bg">
-        <a href="index.php" class="logo">
+    <a href="index.php" class="logo">
             <img src="resources/img/y.png" alt="logo">
         </a>
 
@@ -129,11 +130,12 @@
                     <a href="https://twitter.com/yetunde_sola?lang=en" target="_blank">Twitter</a>
                 </li>
                 <li>
-                    <a href="https://medium.com/@ysolaadebayo" target="_blank">Medium</a>
+                    <a href="https://medium.com/@yetundeade" target="_blank">Medium</a>
                 </li>
                 <li>
                     <a href="privacy.php" class="privacy" target="_blank">Privacy Policy</a>
                 </li>
+
             </ul>
 
             <ul>
@@ -144,17 +146,20 @@
                     <a href="about.php">ABOUT</a>
                 </li>
                 <li>
-                    <a href="https://www.yetundesolaadebayo.com/blog/">BLOG</a>
+                    <a href="https://www.yetunderogers.com/blog/">BLOG</a>
                 </li>
                 <li>
                     <a href="contact.php">CONTACT</a>
                 </li>
+
                 <li>
                     <a href="resume.pdf" target="_blank">RESUME</a>
                 </li>
+                
+
             </ul>
         </div>
-        <p class="name"> &copy; Yetunde Sola-Adebayo</p>
+        <p class="name"> &copy; Yetunde Adebayo-Rogers</p>
     </footer>
 
     <!-- Optional JavaScript -->

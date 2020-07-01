@@ -31,22 +31,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/png" href="resources/img/y.png" />
     <meta name="keywords" content="HTML, CSS, HTML, PHP, JavaScript, Portfolio, Web developer, Resume, Job, Freelancer, Houston, Small business, Houston Freelance Web developer, Yetunde Sola-Adebayo">
-    <meta property="og:title" content="Yetunde Sola-Adebayo">
-    <meta name="author" content="Yetunde Sola-Adebayo">
+    <meta property="og:title" content="Yetunde Adebayo-Rogers">
+    <meta name="author" content="Yetunde Adebayo-Rogers">
     <meta property="og:locale" content="en_US">
     <meta name="description" content="Web Developer seeking job opportunities">
     <meta property="og:description" content="Web Developer">
-    <link rel="canonical" href="https://yetundesolaadebayo.com/">
-    <meta property="og:url" content="https://yetundesolaadebayo.com/">
-    <meta property="og:site_name" content="Yetunde Sola-Adebayo">
-    <meta property="og:image" content="https://yetundesolaadebayo.com/resources/img/me.jpg">
+    <link rel="canonical" href="https://yetunderogers.com/">
+    <meta property="og:url" content="https://yetunderogers.com/">
+    <meta property="og:site_name" content="Yetunde Adebayo-Rogers">
+    <meta property="og:image" content="https://yetunderogers.com/resources/img/me.jpg">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="">
     <meta name="twitter:creator" content="@yetunde_sola">
-    <meta name="twitter:title" content="Yetunde Sola-Adebayo">
+    <meta name="twitter:title" content="Yetunde Adebayo-Rogers">
     <meta name="twitter:description" content="I am a self-taught web developer that has a degree in Computer Science. I am a fast learner, I am passionate about my work and this allows be to be efficient.">
-    <meta name="twitter:image" content="https://yetundesolaadebayo.com/resources/img/me.jpg">
-    <meta name="twitter:image:alt" content="Yetunde Sola-Adebayo">
+    <meta name="twitter:image" content="https://yetunderogers.com/resources/img/me.jpg">
+    <meta name="twitter:image:alt" content="Yetunde Adebayo-Rogers">
 
     <!--bootstrap css-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
@@ -72,7 +72,7 @@
                 <header>
                     <section id="navbar">
                     
-                        <i class="fa fa-bars" id="sidebarCollapse"></i>
+                        <i class="fa fa-bars fa-2x" id="sidebarCollapse"></i>
                     
                         <nav id="sidebar">
                             <ul class="list-unstyled components">
@@ -102,7 +102,7 @@
                         </nav>
                     </section>
 
-                    <a href="index.php"><img id="full_logo" src="resources/img/logo.png" alt="logo"></a>
+                    <a href="index.php"><img id="full_logo" src="resources/img/yetunde.png" alt="logo"></a>
 
                 </header>
 
@@ -115,7 +115,6 @@
                    
 
                     <div>
-                    
                             <button class="btn btn-secondary btn-lg btn-space" id="portfolio_btn">
                                 Portfolio
                             </button>
@@ -133,25 +132,25 @@
         </main>
 
         <section class="content">
-            <section class="font">
-                <div id="recent">   
+                <div id="recent" class="font">   
                         <h2 id="portfolio">
                             <u>Recent Works</u>
                         </h2>
                    
 
                     <section id="project">
-                        <figure class="wp-caption">
-                            <a href="https://reactclientpanel-6ed7c.firebaseapp.com/" target="_blank">
-                                <img src="resources/img/clientpanel.jpg" alt="client panel." class="proj_img">
-                                <figcaption class="wp-caption-text">This is a website you can use to manage the balance your clients owe. It was built with React.js, Redux and firebase.</figcaption>
+
+                    <figure class="wp-caption">
+                            <a href="https://secure-sands-34232.herokuapp.com/" target="_blank">
+                                <img src="resources/img/rsz_devnet.jpg" alt="dev net" class="proj_img">
+                                <figcaption class="wp-caption-text">This is a website/social network where developer can connect. It was built with React.js, Redux, Node.js, MongoDB Bootstrap and CSS</figcaption>
                             </a>
                         </figure>
 
                         <figure class="wp-caption">
-                            <a href="https://yetunde79.github.io/react_contact_manager/#/" target="_blank">
-                                <img src="resources/img/contact.jpg" alt="contact manager." class="proj_img">
-                                <figcaption class="wp-caption-text">This is a contact manager website made with React.js. You can add and manage contacts with this website.</figcaption>
+                            <a href="https://reactclientpanel-6ed7c.firebaseapp.com/" target="_blank">
+                                <img src="resources/img/clientpanel.jpg" alt="client panel." class="proj_img">
+                                <figcaption class="wp-caption-text">This is a website you can use to manage the balance your clients owe. It was built with React.js, Redux and firebase.</figcaption>
                             </a>
                         </figure>
 
@@ -165,7 +164,7 @@
 
                         <figure class="wp-caption">
                             <a href="https://condescending-williams-848ae0.netlify.com/" target="_blank">
-                                <img src="resources/img/shoot.jpg" alt="shoot" class="proj_img">
+                                <img src="resources/img/shoot.JPG" alt="shoot" class="proj_img">
                                 <figcaption class="wp-caption-text">Made with the team at Shoot Technologies. It was created with HTML, CSS and JavaScript.</figcaption>
                             </a>
                         </figure>
@@ -193,7 +192,7 @@
                         </figure>
 
                     </section>
-                        <a id="more" target="_blank" href="https://github.com/Yetunde79">More Projects</a>
+                        <a id="more" target="_blank" href="https://github.com/Yetunde79?tab=repositories">More Projects</a>
                 </div>
 
                 <section class="skills">
@@ -201,9 +200,11 @@
                         <u> Skills</u>
                     </h2>
                     <ul>
-                        <li>Project Management</li>
                         <li>Professional Communication</li>
-                        <li>Self-Starter</li>
+                        <li>Teamwork</li>
+                        <li>Adaptability</li>
+                        <li>Problem-Solving</li>
+                        <li>Inquisitive</li>
                     </ul>
 
                     <section class="skill_grid">
@@ -220,49 +221,57 @@
                             <div class="lang" id="javascript">JavaScript</div>
                         </div>
                         <div class="purple">
+                            <div class="lang" id="react">React.js</div>
+                        </div>
+                        <div class="purple">
                             <div class="lang" id="node">Node.js</div>
                         </div>
                         <div class="purple">
                             <div class="lang" id="php">PHP</div>
                         </div>
+                        <div class="purple">
+                            <div class="lang" id="wordpress">WordPress</div>
+                        </div>
+                        <div class="purple">
+                            <div class="lang" id="mongodb">MongoDB</div>
+                        </div>
                     </section>
-                </section>
 
                 <section class="contact_pad">
                     <section class="contact container-fluid">
                         
                         <!-- Begin Mailchimp Signup Form -->
-<link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
-<style type="text/css">
-	#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
-	/* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
-	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
-</style>
-<div id="mc_embed_signup">
-<form action="https://yetundesolaadebayo.us19.list-manage.com/subscribe/post?u=cf698184b53cba6efbf63334e&amp;id=aa580fd03f" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-    <div id="mc_embed_signup_scroll">
-	<h2>Subscribe to my mailing list to get updates on my podcast and tech journey</h2>
-<div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
-<div class="mc-field-group">
-	<label for="mce-NAME">Name </label>
-	<input type="text" value="" name="NAME" class="" id="mce-NAME">
-</div>
-<div class="mc-field-group">
-	<label for="mce-EMAIL">Email Address  <span class="asterisk">*</span>
-</label>
-	<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
-</div>
-	<div id="mce-responses" class="clear">
-		<div class="response" id="mce-error-response" style="display:none"></div>
-		<div class="response" id="mce-success-response" style="display:none"></div>
-	</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_cf698184b53cba6efbf63334e_aa580fd03f" tabindex="-1" value=""></div>
-    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
-    </div>
-</form>
-</div>
+                        <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
+                        <style type="text/css">
+                            #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
+                            /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+                            We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+                        </style>
+                        <div id="mc_embed_signup">
+                        <form action="https://yetundesolaadebayo.us19.list-manage.com/subscribe/post?u=cf698184b53cba6efbf63334e&amp;id=aa580fd03f" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                            <div id="mc_embed_signup_scroll">
+                            <h2>Subscribe to my mailing list to get updates on my podcast and tech journey</h2>
+                        <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
+                        <div class="mc-field-group">
+                            <label for="mce-NAME">Name </label>
+                            <input type="text" value="" name="NAME" class="" id="mce-NAME">
+                        </div>
+                        <div class="mc-field-group">
+                            <label for="mce-EMAIL">Email Address  <span class="asterisk">*</span>
+                        </label>
+                            <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+                        </div>
+                            <div id="mce-responses" class="clear">
+                                <div class="response" id="mce-error-response" style="display:none"></div>
+                                <div class="response" id="mce-success-response" style="display:none"></div>
+                            </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_cf698184b53cba6efbf63334e_aa580fd03f" tabindex="-1" value=""></div>
+                            <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+                            </div>
+                        </form>
+                        </div>
 
-<!--End mc_embed_signup-->
+                        <!--End mc_embed_signup-->
 
                     </section>
                 </section>
@@ -272,53 +281,53 @@
             <!--newsletter-->
 
             <footer>
-                <a href="index.php" class="logo">
-                    <img src="resources/img/y.png" alt="logo">
-                </a>
+            <a href="index.php" class="logo">
+            <img src="resources/img/y.png" alt="logo">
+        </a>
 
-                <div class="list">
-                    <ul>
-                        <li>
-                            <a href="https://github.com/Yetunde79" target="_blank">Github</a>
-                        </li>
-                        <li>
-                            <a href="https://www.linkedin.com/in/yetundeadebayo/" target="_blank">LinkedIn</a>
-                        </li>
-                        <li>
-                            <a href="https://twitter.com/yetunde_sola?lang=en" target="_blank">Twitter</a>
-                        </li>
-                        <li>
-                            <a href="https://medium.com/@ysolaadebayo" target="_blank">Medium</a>
-                        </li>
-                        <li>
-                            <a href="privacy.php" class="privacy" target="_blank">Privacy Policy</a>
-                        </li>
+        <div class="list">
+            <ul>
+                <li>
+                    <a href="https://github.com/Yetunde79" target="_blank">Github</a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/yetundeadebayo/" target="_blank">LinkedIn</a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/yetunde_sola?lang=en" target="_blank">Twitter</a>
+                </li>
+                <li>
+                    <a href="https://medium.com/@yetundeade" target="_blank">Medium</a>
+                </li>
+                <li>
+                    <a href="privacy.php" class="privacy" target="_blank">Privacy Policy</a>
+                </li>
 
-                    </ul>
+            </ul>
 
-                    <ul>
-                        <li>
-                            <a href="index.php">HOME</a>
-                        </li>
-                        <li>
-                            <a href="about.php">ABOUT</a>
-                        </li>
-                        <li>
-                            <a href="https://www.yetundesolaadebayo.com/blog/">BLOG</a>
-                        </li>
-                        <li>
-                            <a href="contact.php">CONTACT</a>
-                        </li>
+            <ul>
+                <li>
+                    <a href="index.php">HOME</a>
+                </li>
+                <li>
+                    <a href="about.php">ABOUT</a>
+                </li>
+                <li>
+                    <a href="https://www.yetunderogers.com/blog/">BLOG</a>
+                </li>
+                <li>
+                    <a href="contact.php">CONTACT</a>
+                </li>
 
-                        <li>
-                            <a href="resume.pdf" target="_blank">RESUME</a>
-                        </li>
-                       
+                <li>
+                    <a href="resume.pdf" target="_blank">RESUME</a>
+                </li>
+                
 
-                    </ul>
-                </div>
-                <p class="name"> &copy; Yetunde Sola-Adebayo</p>
-            </footer>
+            </ul>
+        </div>
+        <p class="name"> &copy; Yetunde Adebayo-Rogers</p>
+    </footer>
 
         </section>
     </div>
