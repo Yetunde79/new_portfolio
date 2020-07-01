@@ -1,1 +1,6 @@
 .DS_STORE
+/blog
+/project
+/wp-blog-yetunde-3639393a.sql.zip
+.env
+credentials.csv
