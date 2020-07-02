@@ -8,6 +8,9 @@
     $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
     $dotenv->load();
 
+    $msg = '';
+    $msgClass = '';
+
     if(filter_has_var(INPUT_POST, 'submit')){
 
         $name = htmlspecialchars($_POST['name']);
