@@ -22,6 +22,7 @@ img {
     grid-gap: 20px;
     grid-template-columns: 1fr;
     padding-top: 10%;
+    padding-left: 5%;
   }
   img {
     padding-top: 5%;
@@ -33,6 +34,7 @@ img {
     grid-gap: 20px;
     grid-template-columns: 1fr;
     padding-top: 5%;
+    padding-left: 5%;
   }
 }
 @media (min-width: 555px) and (max-width: 750px) {
@@ -41,6 +43,7 @@ img {
     grid-gap: 20px;
     grid-template-columns: 1fr;
     padding-top: 5%;
+    padding-left: 5%;
   }
 }
 @media (min-width: 751px) and (max-width: 900px) {
@@ -49,5 +52,6 @@ img {
     grid-gap: 20px;
     grid-template-columns: 1fr;
     padding-top: 3%;
+    padding-left: 5%;
   }
 }

@@ -8,63 +8,87 @@
     $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
     $dotenv->load();
 
-    if(filter_has_var(INPUT_POST, 'submit')){
+    $msg = '';
+    $msgClass = '';
 
-        $name = htmlspecialchars($_POST['name']);
-        $email = htmlspecialchars($_POST['email']);
-        $subject = htmlspecialchars($_POST['subject']);
-        $message = htmlspecialchars($_POST['message']);
+    // Google reCaptcha secret key
+    $secretKey  = $_ENV['GGL_SCRT_KEY'];
 
-        $from = 'ysolaadebayo@gmail.com';
-        $recipient = 'yetundearogers@gmail.com';
-        
+    $statusMsg = '';
 
-        $usernameSmtp = $_ENV['USER_SMTP'];
+    if(isset($_POST['submit'])){
+        if(isset($_POST['captcha-response']) && !empty($_POST['captcha-response'])){
+            // Get verify response data
+            $verifyResponse = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret='.$secretKey.'&response='.$_POST['captcha-response']);
+            $responseData = json_decode($verifyResponse);
+            if($responseData->success){
+                //Contact form submission code goes here ...
+                if(filter_has_var(INPUT_POST, 'submit')){
 
-        $passwordSmtp = $_ENV['PASSWORD_SMTP'];
-
-        $host = $_ENV['HOST'];
-
-        $port = $_ENV['PORT'];
-
-        $body = '<h2>Contact Request from personal website</h2>
-        <h4>Name</h4><p>'.$name.'</p>
-        <h4>Email</h4><p>'.$email.'</p>
-        <h4>Message</h4><p>'.$message.'</p>
-        ';
-
-        $mail = new PHPMailer(true);
-
-        try {
-            // Specify the SMTP settings.
-            $mail->isSMTP();
-            $mail->setFrom($from, $name);
-            $mail->Username   = $usernameSmtp;
-            $mail->Password   = $passwordSmtp;
-            $mail->Host       = $host;
-            $mail->Port       = $port;
-            $mail->SMTPAuth   = true;
-            $mail->SMTPSecure = 'tls';
-
-            $mail->addAddress($recipient);
-
-            // Specify the content of the message.
-            $mail->isHTML(true);
-            $mail->Subject    = $subject;
-            $mail->Body       = $body;
-            $mail->Send();
+                    $name = htmlspecialchars($_POST['name']);
+                    $email = htmlspecialchars($_POST['email']);
+                    $subject = htmlspecialchars($_POST['subject']);
+                    $message = htmlspecialchars($_POST['message']);
             
-        // echo "Email sent!" , PHP_EOL;
-            $msg = 'Your email has been sent';
-            $msgClass = 'alert-success';
-        } catch (phpmailerException $e) {
-            //echo "An error occurred. {$e->errorMessage()}", PHP_EOL; //Catch errors from PHPMailer.
-            $msg = 'An error occurred.';
-            $msgClass = 'alert-danger';
-        } catch (Exception $e) {
-            //echo "Email not sent. {$mail->ErrorInfo}", PHP_EOL; //Catch errors from Amazon SES.h
-            $msg = 'Your email was not sent';
-            $msgClass = 'alert-danger';
+                    $from = 'ysolaadebayo@gmail.com';
+                    $recipient = 'yetundearogers@gmail.com';
+                    
+            
+                    $usernameSmtp = $_ENV['USER_SMTP'];
+            
+                    $passwordSmtp = $_ENV['PASSWORD_SMTP'];
+            
+                    $host = $_ENV['HOST'];
+            
+                    $port = $_ENV['PORT'];
+            
+                    $body = '<h2>Contact Request from personal website</h2>
+                    <h4>Name</h4><p>'.$name.'</p>
+                    <h4>Email</h4><p>'.$email.'</p>
+                    <h4>Message</h4><p>'.$message.'</p>
+                    ';
+            
+                    $mail = new PHPMailer(true);
+            
+                    try {
+                        // Specify the SMTP settings.
+                        $mail->isSMTP();
+                        $mail->setFrom($from, $name);
+                        $mail->Username   = $usernameSmtp;
+                        $mail->Password   = $passwordSmtp;
+                        $mail->Host       = $host;
+                        $mail->Port       = $port;
+                        $mail->SMTPAuth   = true;
+                        $mail->SMTPSecure = 'tls';
+            
+                        $mail->addAddress($recipient);
+            
+                        // Specify the content of the message.
+                        $mail->isHTML(true);
+                        $mail->Subject    = $subject;
+                        $mail->Body       = $body;
+                        $mail->Send();
+                        
+                    // echo "Email sent!" , PHP_EOL;
+                        $msg = 'Your email has been sent';
+                        $msgClass = 'alert-success';
+                    } catch (phpmailerException $e) {
+                        //echo "An error occurred. {$e->errorMessage()}", PHP_EOL; //Catch errors from PHPMailer.
+                        $msg = 'An error occurred.';
+                        $msgClass = 'alert-danger';
+                    } catch (Exception $e) {
+                        //echo "Email not sent. {$mail->ErrorInfo}", PHP_EOL; //Catch errors from Amazon SES.h
+                        $msg = 'Your email was not sent';
+                        $msgClass = 'alert-danger';
+                    }
+                }
+            }else{
+                $statusMsg = 'Robot verification failed, please try again.';
+                // echo $statusMsg;
+            }
+        }else{
+            $statusMsg = 'Robot verification failed, please try again.';
+            // echo $statusMsg;
         }
     }
 ?>
@@ -191,6 +215,12 @@
                                 <textarea rows="5" class="form-control" name="message" placeholder="Type your message here"></textarea>
                             </div>
 
+                            <!-- Google reCAPTCHA widget -->
+                            <div id="recaptchaContainer" style="transform:scale(0.5);transform-origin:0 0">
+                                <div class="g-recaptcha" data-sitekey="<?php echo $_ENV['GGL_SITE_KEY']; ?>" data-badge="inline" data-size="invisible" data-callback="setResponse"></div><br>
+                                <input type="hidden" id="captcha-response" name="captcha-response" />
+                            </div>
+
                             <div class="text-center">
                                 <input type="submit" class="btn btn-light submit" name="submit" value="Submit">
                             </div>
@@ -265,7 +295,15 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
     <script src="resources/scripts/toggle.js"></script>
-
+    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback" async defer></script>
+    <script>
+        var onloadCallback = function() {
+            grecaptcha.execute();
+        };
+        function setResponse(response) { 
+            document.getElementById('captcha-response').value = response; 
+        } 
+    </script>
 </body>
 
 </html>

@@ -4,3 +4,5 @@
 /wp-blog-yetunde-3639393a.sql.zip
 .env
 credentials.csv
+/vendor
+composer.lock
