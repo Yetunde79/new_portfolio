@@ -13,18 +13,6 @@
         gtag('config', 'UA-121421317-1');
     </script>
 
-    <!-- Hotjar Tracking Code for https://yetundesolaadebayo.com/ -->
-    <script>
-        (function (h, o, t, j, a, r) {
-            h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
-            h._hjSettings = { hjid: 945072, hjsv: 6 };
-            a = o.getElementsByTagName('head')[0];
-            r = o.createElement('script'); r.async = 1;
-            r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
-            a.appendChild(r);
-        })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
-    </script>
-
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Home</title>
@@ -155,7 +143,7 @@
                         </figure>
 
                         <figure class="wp-caption">
-                            <a href="http://www.yettifood.com/" target="_blank">
+                            <a href="https://code-blog.herokuapp.com/" target="_blank">
                                 <img src="resources/img/yettifood.jpg" alt="blog" class="proj_img">
                                 <figcaption class="wp-caption-text">This food blog was created with Node.js, Express.js, ejs, MongoDB/Mongoose and passport.js
                                     so I can login to create posts. It was also deployed on Heroku</figcaption>
@@ -170,7 +158,7 @@
                         </figure>
 
                         <figure class="wp-caption">
-                            <a href="https://yetundesolaadebayo.com/project/movieapp" target="_blank">
+                            <a href="https://still-depths-33786.herokuapp.com/" target="_blank">
                                 <img src="resources/img/movie.jpg" alt="movie_app" class="proj_img">
                                 <figcaption class="wp-caption-text">A movie search app created with NodeJS, ExpressJS, CSS and the OMDb API. You can find the
                                     year released and summary of the movie.</figcaption>
@@ -178,14 +166,14 @@
                         </figure>
 
                         <!-- // <figure class="wp-caption">
-                        //     <a href="https://yetundesolaadebayo.com/project/twitter_api/" target="_blank">
+                        //     <a href="https://yetunderogers.com/project/twitter_api/" target="_blank">
                         //         <img src="resources/img/twitter.jpg" alt="twitter_client" class="proj_img">
                         //         <figcaption class="wp-caption-text">A twitter client that retrieves the most popular tweets from any username. It was created with Twitter API, HTML, CSS and PHP.</figcaption>
                         //     </a>
                         // </figure> -->
 
                         <figure class="wp-caption">
-                            <a href="https://yetundesolaadebayo.com/project/weatherchecker/" target="_blank">
+                            <a href="https://yetunderogers.com/project/weatherchecker/" target="_blank">
                                 <img src="resources/img/weather.jpg" alt="weather" class="proj_img">
                                 <figcaption class="wp-caption-text">A website that finds the weather in any city. It was created with OpenWeatherMap API, HTML, CSS and PHP</figcaption>
                             </a>
