@@ -19,7 +19,7 @@
     if(isset($_POST['submit'])){
         if(isset($_POST['captcha-response']) && !empty($_POST['captcha-response'])){
             // Get verify response data
-            $verifyResponse = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret='.$secretKey.'&response='.$_POST['captcha-response']);
+            $verifyResponse = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret='.urlencode($secretKey).'&response='.urlencode($_POST['captcha-response']));
             $responseData = json_decode($verifyResponse);
             if($responseData->success){
                 //Contact form submission code goes here ...

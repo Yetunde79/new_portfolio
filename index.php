@@ -173,7 +173,7 @@
                         // </figure> -->
 
                         <figure class="wp-caption">
-                            <a href="https://yetunderogers.com/project/weatherchecker/" target="_blank">
+                            <a href="https://www.yetunderogers.com/project/weatherchecker/" target="_blank">
                                 <img src="resources/img/weather.jpg" alt="weather" class="proj_img">
                                 <figcaption class="wp-caption-text">A website that finds the weather in any city. It was created with OpenWeatherMap API, HTML, CSS and PHP</figcaption>
                             </a>
